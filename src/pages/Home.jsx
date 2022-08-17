@@ -6,8 +6,8 @@ import UpdateUser from "../components/14-edit-user";
 import ListUsers from "../components/12-list-users";
 
 
-const HomePage = () => {
-  const [user, setUser]= useState('')
+const HomePage = ({user}) => {
+
   const [pics, setPics]= useState([]);
   const [display, setDisplay]= useState(false);
   const [allUsers, setUsers]= useState(['']);
@@ -22,7 +22,7 @@ const HomePage = () => {
   useEffect(()=>{fetchPics();console.log(pics);}, [user])
   return (
     
-    <div user={user}>
+    <div >
       
       
       {user ? <div><h1>{user} logged in</h1>
