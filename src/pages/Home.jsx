@@ -1,6 +1,6 @@
 import Home from '../components/6-home-about';
 import {useState, useEffect} from 'react';
-import SignupOrLogin from "../components/1-signup";
+
 import DeleteUser from "../components/15-delete-user";
 import UpdateUser from "../components/14-edit-user";
 import ListUsers from "../components/12-list-users";
@@ -22,9 +22,9 @@ const HomePage = () => {
   useEffect(()=>{fetchPics();console.log(pics);}, [user])
   return (
     
-    <div>
-      <Home></Home>
-      <SignupOrLogin setter={setUser}></SignupOrLogin>
+    <div user={user}>
+      
+      
       {user ? <div><h1>{user} logged in</h1>
       <ListUsers setter={setUsers} /> {allUsers.map((allUsers)=>(
         <ul>
