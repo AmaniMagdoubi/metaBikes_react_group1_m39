@@ -1,13 +1,72 @@
-body {
+/* CUSTOM GLOBAL PROPERTIES */
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --ff-main: 'Abel', sans-serif;
+  --ff-title:  'Permanent Marker', cursive;
+  --ff-three: 'Caveat', cursive;
+
+  --clr-text-dark: #000;
+  --clr-text-light: #fff;
+  --clr-background: #f0f0f0ff;
+  --clr-accent: #a3a3a3;
+  --clr-outline:#4c4c4c;
+  --clr-btn: #ff2222;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 2rem;
+  --fs-body: 1rem;
+}
+
+/* Changes the font size over 800px */
+@media (min-width: 800px){
+  :root{
+  --fs-h1: 3.5rem;
+  --fs-h2: 2.8rem;
+  --fs-h3: 2.4rem;
+  --fs-body: 1.2rem;
+  }
+}
+
+/* smooth transition between media queries */
+h1, h2, h3, p{transition: 0.7s}
+a, button{transition: 0.4s}
+
+/* smoothly animate the scroll position when the user clicks on a link within the same page */
+/* disable left and right scroll*/
+html {scroll-behavior: smooth; overflow-x: hidden;}
+
+/* applies root to body */
+body{
+  max-width: 100%;
+  background: var(--clr-background);
+  color: var(--clr-text-dark);
+  font-family: var(--ff-main);
+}
+/* Connects font sizes to root sizes */
+h1{font-size: var(--fs-h1); font-family: var(--ff-title);}
+h2{font-size: var(--fs-h2); font-family: var(--ff-title);}
+h3{font-size: var(--fs-h3); font-family: var(--ff-title);}
+p{font-size: var(--fs-body); font-family: var(--ff-main);}
+
+img{display: block; max-width: 200px; max-height: 200px;}
+section{margin: 30px;}
+a:link, a:visited{color: var(--clr-text-dark); font-family: var(--ff-three);}
+a:hover, a:active{color: var(--clr-btn); cursor: pointer;}
+button:hover{background: var(--clr-accent);}
+button{
+  background: var(--clr-btn); 
+  color: var(--clr-background); 
+  font-size: var(--fs-body);
+  border: none; 
+  border-radius: 10px; 
+  padding: 8px;
+  cursor: pointer;
 }

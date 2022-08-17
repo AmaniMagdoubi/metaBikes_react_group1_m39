@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import "./index.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <h1>Test heading 1</h1>
+      <h2>Test heading 2</h2>
+      <h3>Test heading 3</h3>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <button>Test button</button>
+      <a href="#">Test link</a>
+
     </div>
-  );
-}
+  )
+};
 
 export default App;
+
