@@ -16,8 +16,9 @@ const App = () => {
     <div className="App" >
       <h1>MetaBike</h1>
       <About ></About>
+      
       <SignupOrLogin setter={setUser}></SignupOrLogin>
-      {user ? <div><h1>{user} logged in</h1>
+      {user ? <div>
       <BrowserRouter>
         <nav>
           <Link to="/">Home</Link><br></br>
@@ -25,11 +26,12 @@ const App = () => {
           <Link to="/social">Social App</Link><br></br>
           <Link to="/ebike">E-Bike</Link><br></br>
         </nav>
+        <h1>{user} logged in</h1>
         <Routes>
           <Route  path="*" element={<HomePage user={user}/>} />
-          <Route path="/profile/*" element={<Profile />} />
-          <Route path="/ebike" element={<Ebike />} />
-          <Route path="/social" element={<Social />} />
+          <Route path="/profile/*" element={<Profile user={user}/>} />
+          <Route path="/ebike" element={<Ebike user={user}/>} />
+          <Route path="/social" element={<Social user={user}/>} />
         </Routes>
       </BrowserRouter></div>
       : <h1>not logged in</h1>}
