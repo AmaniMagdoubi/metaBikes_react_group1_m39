@@ -1,11 +1,16 @@
-import React from "react"
+import React from "react";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import {useState, useEffect} from 'react';
 import SignupOrLogin from "./components/1-signup";
 import DeleteUser from "./components/15-delete-user";
 import UpdateUser from "./components/14-edit-user";
 import ListUsers from "./components/12-list-users";
+import Social from "./Social";
+
 
 import "./index.css";
+import LogOut from "./components/2-logout";
+import Home from "./components/6-home-about";
 
 const App = () => {
   const [user, setUser]= useState('')
@@ -22,7 +27,9 @@ const App = () => {
   } 
   useEffect(()=>{fetchPics();console.log(pics);}, [user])
   return (
+    
     <div>
+      <Home></Home>
       <SignupOrLogin setter={setUser}></SignupOrLogin>
       {user ? <div><h1>{user} logged in</h1>
       <ListUsers setter={setUsers} /> {allUsers.map((allUsers)=>(
@@ -30,7 +37,14 @@ const App = () => {
           <h2>{allUsers}</h2>
         </ul>
       ))} 
-      
+      <BrowserRouter>
+      <nav>
+      <Link to="/social">Social</Link>
+      </nav>
+      <Routes>
+      <Route path= "/social" element={<Social/>} />
+      </Routes>
+      </BrowserRouter>
       <DeleteUser setter={setDel}>User deleted: {del}</DeleteUser>
       <UpdateUser setter={setUpd}>User updated: {upd}</UpdateUser>
       <button onClick={(event)=>{setDisplay(!display)}}>images</button>
@@ -48,6 +62,7 @@ const App = () => {
       <a href="#">Test link</a>
 
     </div>
+    
   )
 };
 
