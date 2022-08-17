@@ -26,7 +26,7 @@ const App = () => {
           <Link to="/ebike">E-Bike</Link><br></br>
         </nav>
         <Routes>
-          <Route  path="*" element={<HomePage />} />
+          <Route  path="*" element={<HomePage user={user}/>} />
           <Route path="/profile/*" element={<Profile />} />
           <Route path="/ebike" element={<Ebike />} />
           <Route path="/social" element={<Social />} />
