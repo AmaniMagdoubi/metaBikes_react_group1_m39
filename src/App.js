@@ -6,26 +6,25 @@ import Profile from "./pages/Profile";
 import HomePage from "./pages/Home";
 import Ebike from "./pages/Ebike";
 import SignupOrLogin from "./components/1-signup";
+import LocalInterests from "./components/8-local-interests";
+import Footer from "./components/9-contact-footer";
+
 
 import "./index.css";
-
-import { JourneyPlanner } from "./components/7-journey-planner";
-import About from "./components/6-home-about";
 
 
 const App = () => {
   const [user, setUser]= useState('')
   return (
     <div>
-      <About />
-      <JourneyPlanner/>
+      <HomePage />
       <SignupOrLogin setter={setUser}></SignupOrLogin>
-      {user ? <div><h1>{user} logged in</h1>
+      {/* {user ? <div><h1>{user} logged in</h1>
       <ListUsers setter={setUsers} /> {allUsers.map((allUsers)=>(
         <ul>
           <h2>{allUsers}</h2>
         </ul>
-      ))} 
+      ))}  */}
       
       <SignupOrLogin setter={setUser}></SignupOrLogin>
       {user ? <div>
@@ -45,8 +44,11 @@ const App = () => {
         </Routes>
       </BrowserRouter></div>
       : <h1>not logged in</h1>}
+
+      <LocalInterests />
+      <Footer />
     </div>
-  );
+  )
 };
 
 
