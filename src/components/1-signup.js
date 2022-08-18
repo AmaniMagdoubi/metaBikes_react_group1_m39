@@ -2,6 +2,7 @@ import { useState } from "react";
 import { login, signUp } from "../utils"; 
 import { SignupWrapper } from "../styles/1-signup.styles";
 
+
 const SignupOrLogin = ({setter})=>{
     const [username, setUsername] = useState();
     const [email, setEmail]= useState();
