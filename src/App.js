@@ -11,10 +11,11 @@ import "./index.css";
 
 import { JourneyPlanner } from "./components/7-journey-planner";
 import About from "./components/6-home-about";
+import Switch from "./components/17-switch";
 
 
 const App = () => {
-  const [user, setUser]= useState('')
+  const [user, setUser]= useState('');
   return (
     <div>
       <About />
@@ -27,24 +28,10 @@ const App = () => {
         </ul>
       ))} 
       
-      <SignupOrLogin setter={setUser}></SignupOrLogin>
-      {user ? <div>
-      <BrowserRouter>
-        <nav>
-          <Link to="/">Home</Link><br></br>
-          <Link to="/profile">Profile Details</Link><br></br>
-          <Link to="/social">Social App</Link><br></br>
-          <Link to="/ebike">E-Bike</Link><br></br>
-        </nav>
-        <h1>{user} logged in</h1>
-        <Routes>
-          <Route  path="*" element={<HomePage user={user}/>} />
-          <Route path="/profile/*" element={<Profile user={user}/>} />
-          <Route path="/ebike" element={<Ebike user={user}/>} />
-          <Route path="/social" element={<Social user={user}/>} />
-        </Routes>
-      </BrowserRouter></div>
-      : <h1>not logged in</h1>}
+      <Switch ></Switch>
+
+
+     
     </div>
   );
 };
