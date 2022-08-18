@@ -6,6 +6,8 @@ import UpdateUser from "./components/14-edit-user";
 import ListUsers from "./components/12-list-users";
 
 import "./index.css";
+import { JourneyPlanner } from "./components/7-journey-planner";
+import { Home } from "./components/6-home-about";
 
 const App = () => {
   const [user, setUser]= useState('')
@@ -23,6 +25,8 @@ const App = () => {
   useEffect(()=>{fetchPics();console.log(pics);}, [user])
   return (
     <div>
+      <Home/>
+      <JourneyPlanner/>
       <SignupOrLogin setter={setUser}></SignupOrLogin>
       {user ? <div><h1>{user} logged in</h1>
       <ListUsers setter={setUsers} /> {allUsers.map((allUsers)=>(

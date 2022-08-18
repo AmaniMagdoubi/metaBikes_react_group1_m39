@@ -17,21 +17,21 @@
   --clr-background: #f0f0f0ff;
   --clr-accent: #a3a3a3;
   --clr-outline:#4c4c4c;
-  --clr-btn: #ff2222;
+  --clr-btn: #c685ff;
 
   --fs-h1: 3rem;
-  --fs-h2: 2.5rem;
-  --fs-h3: 2rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.2rem;
   --fs-body: 1rem;
 }
 
-/* Changes the font size over 800px */
-@media (min-width: 800px){
+/* Changes the font size over 1080px */
+@media (min-width: 1080px){
   :root{
   --fs-h1: 3.5rem;
-  --fs-h2: 2.8rem;
-  --fs-h3: 2.4rem;
-  --fs-body: 1.2rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.5rem;
+  --fs-body: 1.1rem;
   }
 }
 
@@ -56,7 +56,7 @@ h2{font-size: var(--fs-h2); font-family: var(--ff-title);}
 h3{font-size: var(--fs-h3); font-family: var(--ff-title);}
 p{font-size: var(--fs-body); font-family: var(--ff-main);}
 
-img{display: block; max-width: 200px; max-height: 200px;}
+img{display: block;}
 section{margin: 30px;}
 a:link, a:visited{color: var(--clr-text-dark); font-family: var(--ff-three);}
 a:hover, a:active{color: var(--clr-btn); cursor: pointer;}
