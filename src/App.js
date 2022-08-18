@@ -8,14 +8,24 @@ import Ebike from "./pages/Ebike";
 import SignupOrLogin from "./components/1-signup";
 
 import "./index.css";
+
+import { JourneyPlanner } from "./components/7-journey-planner";
 import About from "./components/6-home-about";
+
 
 const App = () => {
   const [user, setUser]= useState('')
   return (
-    <div className="App" >
-      <h1>MetaBike</h1>
-      <About ></About>
+    <div>
+      <About />
+      <JourneyPlanner/>
+      <SignupOrLogin setter={setUser}></SignupOrLogin>
+      {user ? <div><h1>{user} logged in</h1>
+      <ListUsers setter={setUsers} /> {allUsers.map((allUsers)=>(
+        <ul>
+          <h2>{allUsers}</h2>
+        </ul>
+      ))} 
       
       <SignupOrLogin setter={setUser}></SignupOrLogin>
       {user ? <div>
