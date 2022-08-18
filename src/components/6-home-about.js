@@ -32,8 +32,8 @@ const About = () => {
                                         <span>NEW</span>
                                     </div>
                                     <div class="productText">
-                                        <h3>Plan a journey with ease</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                        <h3>Journey Planner</h3>
+                                        <p>Plan a journey with ease</p>
                                     </div>
                                     <div class="overlay">
                                         <div class="overlayText">
@@ -49,8 +49,8 @@ const About = () => {
                                         <span>NEW</span>
                                     </div>
                                     <div class="productText">
-                                        <h3>Check the weather forcast</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                        <h3>Weather Forcast</h3>
+                                        <p>Check the weather forcast</p>
                                     </div>
                                     <div class="overlay">
                                         <div class="overlayText">
@@ -66,8 +66,8 @@ const About = () => {
                                         <span>NEW</span>
                                     </div>
                                     <div class="productText">
-                                        <h3>Build friendships</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                        <h3>Meta Community</h3>
+                                        <p>Build friendships</p>
                                     </div>
                                     <div class="overlay">
                                         <div class="overlayText">
@@ -83,8 +83,8 @@ const About = () => {
                                         <span>COMING SOON</span>
                                     </div>
                                     <div class="productText">
-                                        <h3>Buy and sell on our eBike store</h3>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                                        <h3>E-Bike</h3>
+                                        <p>Buy and sell on our eBike store</p>
                                     </div>
                                     <div class="overlay">
                                         <div class="overlayText">
