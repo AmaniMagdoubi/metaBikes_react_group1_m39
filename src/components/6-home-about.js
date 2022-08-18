@@ -4,7 +4,7 @@ import {GolbalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.
 import {HomeWrapper} from "../styles/6-home-about.styles";
 // import image from "../assets/IMG002.jpg"
 
-export const Home = () => {
+const About = () => {
     return(
         <GolbalWrapper>
             <LeftSpace></LeftSpace>
@@ -108,4 +108,5 @@ export const Home = () => {
     )
 }
 
- 
+export default About; 
+
