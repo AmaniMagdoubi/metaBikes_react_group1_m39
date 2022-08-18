@@ -1,3 +1,18 @@
+import About from "../components/6-home-about";
+import JourneyPlanner from "../components/7-journey-planner";
+import Footer from "../components/9-contact-footer";
+
+const HomePage = () => {
+
+  return(
+    <div>
+      <About />
+      <JourneyPlanner />
+      <Footer />
+    </div>
+
+  )
+
 import {useMemo} from 'react'
 import {GoogleMap, useLoadScript, Marker} from '@react-google-maps/api'
 //Google Maps API Key: AIzaSyDQ3RmCjCbjvPJTrwzu8HFah1y306uev3Q
@@ -16,6 +31,7 @@ export default function HomePage() {
 
   if (!isLoaded) return <div>Loading...</div>;
   return <Map />
+
 };
 
 function Map() {

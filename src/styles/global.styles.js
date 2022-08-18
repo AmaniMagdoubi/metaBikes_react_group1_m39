@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const GolbalWrapper = styled.div`
 
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
 
