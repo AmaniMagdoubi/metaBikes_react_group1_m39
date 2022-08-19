@@ -1,4 +1,13 @@
-import React from 'react'
+import React from "react"; 
+import Carousel from "react-elastic-carousel";
+ import CarouselItems from "./18-carousel"
+
+const breakPoints = [
+  { width: 100, itemToShow: 1 }, 
+  { width: 550, itemToShow: 2 }, 
+  { width: 768, itemToShow: 3 }, 
+  { width: 1200, itemToShow: 4 }, 
+];
 
 const LocalInterests = () => {
   return (
@@ -8,7 +17,13 @@ const LocalInterests = () => {
         
         <p>Mark all the towns, highways and streets you want to drive through! Connect with your friends, build a community and share your pictures! Use our Journey Planner and make your ideas come to life!</p>
         <p>Enjoy your travels!</p>
-        <img src='../assets/Notes.txt'></img>
+        {/* <img src="https://random.imagecdn.app/500/500" alt="Ideas Board to plan your journey"></img> */}
+        <div className="Carousel">
+          <CarouselItems Component breakPoints={breakPoints}>
+           <Carousel></Carousel>
+          </CarouselItems>
+
+        </div>
     </div>
   )
 }
