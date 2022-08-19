@@ -197,7 +197,7 @@ import {
             </RightMainWrapper>
         </GolbalWrapper>
 
-    </div>
+    
 
   )
 }
