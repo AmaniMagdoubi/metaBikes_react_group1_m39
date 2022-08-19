@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { login, signUp } from "../utils"
+import { login, signUp } from "../utils"; 
+import { SignupWrapper } from "../styles/1-signup.styles";
 
 
 const SignupOrLogin = ({setter})=>{
@@ -16,7 +17,7 @@ const SignupOrLogin = ({setter})=>{
         await login(username, email, password, setter);
     }
     return(
-        <div>
+        <SignupWrapper>
         <form onSubmit={submitHandler}>
             <label>Create account details:</label><br></br>
             <input onChange={(event)=>setUsername(event.target.value)} placeholder="Username"></input><br></br>
@@ -34,9 +35,7 @@ const SignupOrLogin = ({setter})=>{
 <button type="submit">Submit</button>
 
 </form>
-
-</div>
-
+</SignupWrapper>
     );
 }
 

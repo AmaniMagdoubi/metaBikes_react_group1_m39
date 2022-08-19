@@ -1,5 +1,6 @@
 import {useMemo} from 'react'
 import {GoogleMap, useLoadScript, Marker} from '@react-google-maps/api'
+//Google Maps API Key: AIzaSyDQ3RmCjCbjvPJTrwzu8HFah1y306uev3Q
 
 const mapContainerStyle = {
   width: '100vh',
