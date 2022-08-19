@@ -98,6 +98,7 @@ import {
                         <div className="map">
 
                         <Box position='absolute' left={0} top={0} h='100vh' w='100vh'>
+
         {/* Google Map Box */}
         <GoogleMap
           center={center}
@@ -195,7 +196,10 @@ import {
 
             </RightMainWrapper>
         </GolbalWrapper>
+
+    </div>
+
   )
 }
 
-export default JourneyPlanner; 
+export default JourneyPlanner;

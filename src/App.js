@@ -5,10 +5,14 @@ import LeftNav from "./components/5-left-nav"
 import HomePage from "./pages/Home";
 import UserNav from "./components/3-user-nav"
 import Footer from "./components/9-contact-footer";
-import Switch from "./components/17-switch";
 
-import About from "./components/6-home-about";
 import JourneyPlanner from "./components/7-journey-planner";
+// import HomePage from "./pages/Home";
+import About from "./components/6-home-about";
+// import SignupOrLogin from "./components/1-signup";
+// import Router from "../components/16-router";
+
+import Switch from "./components/17-switch";
 import LocalInterests from "./components/8-local-interests";
 
 const App = ({user}) => {
@@ -18,6 +22,7 @@ const App = ({user}) => {
     
       
       <div user={user}>
+
         <UserNav />
         <LeftNav />
         <Switch></Switch>
@@ -30,6 +35,7 @@ const App = ({user}) => {
         <LocalInterests/>
         
         <Footer />
+
       </div>
 
       

@@ -4,6 +4,7 @@ import Carousel from "react-elastic-carousel";
 class CarouselItems extends Component {
     state = {
         items: [
+
             {id: 1, title:"item #1",url:"https://random.imagecdn.app/500/600"}, 
             {id: 2, title:"item #2",url:"https://random.imagecdn.app/600/900"}, 
             {id: 3, title:"item #3",url:"https://random.imagecdn.app/800/900"}, 
