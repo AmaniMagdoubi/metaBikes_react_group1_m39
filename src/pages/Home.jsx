@@ -1,27 +1,20 @@
-import {useMemo} from 'react'
-import {GoogleMap, useLoadScript, Marker} from '@react-google-maps/api'
-//Google Maps API Key: AIzaSyDQ3RmCjCbjvPJTrwzu8HFah1y306uev3Q
+import About from "../components/6-home-about";
+import JourneyPlanner from "../components/7-journey-planner";
+import Switch from "../components/17-switch";
 
-const mapContainerStyle = {
-  width: '100vh',
-  height: '100vh',
-};
+// IGNORE THIS PAGE FOR NOW
 
-const center = { lat: 48.8584, lng: 2.2945 };
 
-export default function HomePage() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_PUBLIC_GOOGLE_MAPS_API_KEY,
-  })
+const HomePage = ({user}) => {
 
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Map />
-};
+    return (
+      
+      <div >
+        
+  
+        </div>
+    )
+  }
+  
+  export default HomePage;
 
-function Map() {
-  return <GoogleMap
-    zoom={10}
-    center={center}
-    mapContainerStyle={mapContainerStyle}>
-  </GoogleMap>
-}

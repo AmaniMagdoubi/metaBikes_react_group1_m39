@@ -3,6 +3,7 @@ import Social from "../pages/Social";
 import Profile from "../pages/Profile";
 import HomePage from "../pages/Home";
 import Ebike from "../pages/Ebike";
+import App from "../App";
 
 const Router = ({user}) =>{
 
@@ -17,7 +18,7 @@ return(
         </nav>
         <h1>{user} logged in</h1>
         <Routes>
-          <Route  path="*" element={<HomePage user={user}/>} />
+          <Route  path="*" element={<HomePage user={user} />} />
           <Route path="/profile/*" element={<Profile user={user}/>} />
           <Route path="/ebike" element={<Ebike user={user}/>} />
           <Route path="/social" element={<Social user={user}/>} />
