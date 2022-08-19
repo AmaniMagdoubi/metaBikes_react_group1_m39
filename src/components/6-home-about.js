@@ -96,10 +96,9 @@ const About = () => {
                             </div>
                         </div>
                     </Row>
-                    {/* <div className="home-end_wrapper">
-                        <p>Share with your friends!</p>
-                        <p>images / design</p>
-                    </div> */}
+                    <div className="">
+                        
+                    </div>
                 </div>
                 </HomeWrapper>
 

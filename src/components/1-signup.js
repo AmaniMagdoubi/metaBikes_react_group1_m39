@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { login, signUp } from "../utils"; 
 import { SignupWrapper } from "../styles/1-signup.styles";
+import {GolbalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Golbal wrapper styles
 
 
 const SignupOrLogin = ({setter})=>{
@@ -17,6 +18,9 @@ const SignupOrLogin = ({setter})=>{
         await login(username, email, password, setter);
     }
     return(
+        <GolbalWrapper>
+            <LeftSpace></LeftSpace>
+            <RightMainWrapper>
         <SignupWrapper>
         <form onSubmit={submitHandler}>
             <label>Create account details:</label><br></br>
@@ -36,6 +40,8 @@ const SignupOrLogin = ({setter})=>{
 
 </form>
 </SignupWrapper>
+</RightMainWrapper>
+</GolbalWrapper>
     );
 }
 

@@ -1,6 +1,7 @@
 import React from "react"; 
 import Carousel from "react-elastic-carousel";
- import CarouselItems from "./18-carousel"
+import CarouselItems from "./18-carousel"
+import {GolbalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Golbal wrapper styles
 
 const breakPoints = [
   { width: 100, itemToShow: 1 }, 
@@ -11,6 +12,9 @@ const breakPoints = [
 
 const LocalInterests = () => {
   return (
+    <GolbalWrapper>
+            <LeftSpace></LeftSpace>
+            <RightMainWrapper>
     <div>
         <h1>Local Interests</h1>
         <p><em>Are you planning a journey / tour?</em> Browse our e-ideas-board to sparke your creativity!</p>
@@ -25,6 +29,8 @@ const LocalInterests = () => {
 
         </div>
     </div>
+    </RightMainWrapper>
+    </GolbalWrapper>
   )
 }
 
