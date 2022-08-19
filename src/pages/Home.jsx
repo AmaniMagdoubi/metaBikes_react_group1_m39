@@ -17,3 +17,4 @@ const HomePage = ({user}) => {
   }
   
   export default HomePage;
+

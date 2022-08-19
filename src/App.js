@@ -1,5 +1,4 @@
 import React from "react";
-import {useState, } from 'react';
 import "./index.css";
 import JourneyPlanner from "./components/7-journey-planner";
 import HomePage from "./pages/Home";
@@ -13,6 +12,7 @@ import Switch from "./components/17-switch";
 const App = ({user}) => {
 
   return (
+
     
       
       <div user={user}>
@@ -28,6 +28,7 @@ const App = ({user}) => {
      
     
   );
+
 };
 
 

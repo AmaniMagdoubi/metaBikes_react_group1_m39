@@ -7,7 +7,9 @@ const mapContainerStyle = {
   height: '100vh',
 };
 
+
 const center = { lat: 48.8584, lng: 2.2945 };
+
 
 export default function JourneyPlanner() {
   const { isLoaded } = useLoadScript({
@@ -25,3 +27,5 @@ function Map() {
     mapContainerStyle={mapContainerStyle}>
   </GoogleMap>
 }
+
+export default JourneyPlanner; 
