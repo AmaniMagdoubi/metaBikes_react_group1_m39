@@ -1,4 +1,3 @@
-
 import React from 'react'
 import {useState, useEffect} from 'react';
 
@@ -29,3 +28,4 @@ const Social = ({user}) => {
 }
 
 export default Social;
+

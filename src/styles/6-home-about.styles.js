@@ -4,16 +4,18 @@ import "../index.css";
 export const HomeWrapper = styled.div`
 
   height: 100%;
+  margin-top: 2.1em;
   display:flex;
   align-items: center;
     
   .home_wrapper{
 
-    width: 90%;
+    width: 95%;
+    height: auto;
     margin: auto;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
-    background: orange;
+    background: var(--clr-accent);
     
   }
 
@@ -21,7 +23,6 @@ export const HomeWrapper = styled.div`
     height: auto;
     width: auto;
     margin-top: 10em;
-    /* background: var(--clr-accent); */
 
     img{
       margin: auto;
@@ -44,14 +45,14 @@ export const HomeWrapper = styled.div`
   .productSection_wrapper{
     width: inherit;
     margin: auto;
-    padding-top: 8em;
+    padding-top: 3em;
 
       .productSection{
       display:flex;
       text-align: center;
       justify-content: center;
-      height: 320px;
       width: 100%;
+      flex-wrap: wrap;
       margin: auto;
     }
 
@@ -59,6 +60,7 @@ export const HomeWrapper = styled.div`
       position: relative;
       background-color: var(--clr-text-light);
       max-width: 250px;
+      height: 300px;
       margin: 10px;
       display:flex;
       flex-direction: column;
@@ -87,6 +89,7 @@ export const HomeWrapper = styled.div`
 
     .productText{
       margin: 0 20px;
+      
     }
 
     .productText h3{
@@ -98,6 +101,8 @@ export const HomeWrapper = styled.div`
     .productText p{
       padding-top: 30px;
       line-height: 1.5;
+      width: 12em;
+
     }
 
     /* Product section Tags */
