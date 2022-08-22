@@ -7,6 +7,7 @@ import HomePage from "./pages/Home";
 import UserNav from "./components/3-user-nav"
 import Themes from "./components/10-themes";
 import Footer from "./components/9-contact-footer";
+import Weather from "./components/19-weatherApp";
 
 import JourneyPlanner from "./components/7-journey-planner";
 // import HomePage from "./pages/Home";
@@ -44,6 +45,7 @@ const App = () => {
 
 
         <About></About>
+
         <LocalInterests/>
         <JourneyPlanner></JourneyPlanner>
         
