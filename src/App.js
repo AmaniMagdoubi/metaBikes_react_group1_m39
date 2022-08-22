@@ -47,7 +47,7 @@ const App = () => {
         <About></About>
 
         <LocalInterests/>
-        <JourneyPlanner></JourneyPlanner>
+        {/* <JourneyPlanner></JourneyPlanner> */}
         
         <Footer />
 
