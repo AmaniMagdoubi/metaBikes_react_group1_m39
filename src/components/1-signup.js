@@ -24,7 +24,6 @@ const SignupOrLogin = ({setter})=>{
             <input onChange={(event)=>setEmail(event.target.value)} type='email' placeholder="Email"></input><br></br>
             <input onChange={(event)=>setPassword(event.target.value)} placeholder="Password"></input><br></br>
             <button type="submit">Submit</button>
-            
         </form>
 
 <form onSubmit={loginHandler}>
