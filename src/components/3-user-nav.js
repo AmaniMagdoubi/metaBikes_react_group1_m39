@@ -1,19 +1,20 @@
 import React from 'react'
-import {GolbalNavWrapper, TopBottomWrapper, Row, Column} from "../styles/global.styles.js"; //Golbal wrapper styles
+import {GNavWrapper, Row} from "../styles/global.styles.js"; //Global wrapper styles
 import {UserWrapper} from "../styles/3-user-nav.styles";
+import "../index.css";
 
-const UserNav = () => {
+const UserNav = ({modalOn}) => {
+  
   return (
-    <GolbalNavWrapper>
-    <TopBottomWrapper>
+    <GNavWrapper>
         <UserWrapper>
             <div className="user_wrapper">
                 <Row>
                 <div className="user_links">
                     
-                    <a>Lorem Ipsum</a>
-                    <a>Lorem Ipsum</a>
-                    <a>Lorem Ipsum</a>
+                    <a onClick = {modalOn}>Themes</a>
+                    <a>Community</a>
+                    <a>Profile</a>
                     
                 </div>
                 <div class="header-verline"></div>
@@ -24,8 +25,7 @@ const UserNav = () => {
                 </Row>
             </div>
         </UserWrapper>
-    </TopBottomWrapper>
-    </GolbalNavWrapper>
+    </GNavWrapper>
   )
 }
 

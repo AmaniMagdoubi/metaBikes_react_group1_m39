@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { login, signUp } from "../utils"; 
 import { SignupWrapper } from "../styles/1-signup.styles";
-import {GolbalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Golbal wrapper styles
+import {GlobalWrapper, LeftSpace, RightMainWrapper} from "../styles/global.styles.js"; //Global wrapper styles
 
 
 const SignupOrLogin = ({setter})=>{
@@ -18,7 +18,7 @@ const SignupOrLogin = ({setter})=>{
         await login(username, email, password, setter);
     }
     return(
-        <GolbalWrapper>
+        <GlobalWrapper>
             <LeftSpace></LeftSpace>
             <RightMainWrapper>
         <SignupWrapper>
@@ -41,7 +41,7 @@ const SignupOrLogin = ({setter})=>{
 </form>
 </SignupWrapper>
 </RightMainWrapper>
-</GolbalWrapper>
+</GlobalWrapper>
     );
 }
 
