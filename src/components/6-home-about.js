@@ -1,12 +1,12 @@
 import React from "react"
-import "../index.css"; //Golbal styles
-import {GolbalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Golbal wrapper styles
+import "../index.css"; //Global styles
+import {GlobalWrapper, LeftSpace, RightMainWrapper, Row, Column} from "../styles/global.styles.js"; //Global wrapper styles
 import {HomeWrapper} from "../styles/6-home-about.styles";
-// import image from "../assets/IMG002.jpg"
+import image from "../assets/IMG002.jpg"
 
 const About = () => {
     return(
-        <GolbalWrapper>
+        <GlobalWrapper>
             <LeftSpace></LeftSpace>
             <RightMainWrapper>
 
@@ -15,21 +15,23 @@ const About = () => {
                     <div className="title_wrapper">
                         <h1>META BIKES</h1>
                         <h2>Plan a trip with your friends online and meet offline!</h2> 
-                        {/* <img src={image} alt="bike"/> */}
                     </div>
-                    <div className="about_wrapper">
-                        <h3>WELCOME TO META BIKES</h3> 
-                        <p>Your all-in-one platform whether you are a professional or hobbyist biker. We're touring-friendly and here to help you every step of the way. Plan your eagerly-awaited adventure, join our community and sell, buy and share gear on our e-Bike store!</p>
-                    </div>
+                    <Column>
+                        <div className="about_wrapper">
+                            <h3>WELCOME TO META BIKES</h3> 
+                            <p>Your all-in-one platform whether you are a professional or hobbyist biker. We're touring-friendly and here to help you every step of the way. Plan your eagerly-awaited adventure, join our community and sell, buy and share gear on our e-Bike store!</p>
+                        </div>
+                        <span><img src="https://random.imagecdn.app/2000/900" alt="random img"/></span>
+                    </Column>
                     <Row>
                         <div class="productSection_wrapper">
                             <div class="productSection">
                                 
-                                <div class="product" id="androidApp">
+                                <div class="product" id="two">
 
                                     <div class="addTag">
                                         <img src="https://random.imagecdn.app/600/600" alt="random img"/>
-                                        <span>NEW</span>
+                                        <span></span>
                                     </div>
                                     <div class="productText">
                                         <h3>Journey Planner</h3>
@@ -42,11 +44,11 @@ const About = () => {
                                     </div>
 
                                 </div>
-                                <div class="product" id="figmaPlugin">
+                                <div class="product" id="two">
 
                                     <div class="addTag">
                                         <img src="https://random.imagecdn.app/500/500" alt="random img"/>
-                                        <span>NEW</span>
+                                        <span></span>
                                     </div>
                                     <div class="productText">
                                         <h3>Weather Forcast</h3>
@@ -59,7 +61,7 @@ const About = () => {
                                     </div>
 
                                 </div>
-                                <div class="product" id="androidApp">
+                                <div class="product" id="three">
 
                                     <div class="addTag">
                                         <img src="https://random.imagecdn.app/400/400" alt="random img"/>
@@ -76,7 +78,7 @@ const About = () => {
                                     </div>
 
                                 </div>
-                                <div class="product" id="adobeExtension">
+                                <div class="product" id="four">
 
                                     <div class="addTag">
                                         <img src="https://random.imagecdn.app/300/300" alt="random img"/>
@@ -103,7 +105,7 @@ const About = () => {
                 </HomeWrapper>
 
             </RightMainWrapper>
-        </GolbalWrapper>
+        </GlobalWrapper>
     )
 }
 

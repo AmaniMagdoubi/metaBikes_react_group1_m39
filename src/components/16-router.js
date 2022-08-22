@@ -4,14 +4,11 @@ import Profile from "../pages/Profile";
 import HomePage from "../pages/Home";
 import Ebike from "../pages/Ebike";
 import App from "../App";
-import { GolbalNavWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
+// import { GlobalWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
 
 const Router = ({user}) =>{
 
 return(
-<GolbalNavWrapper>
-<LeftSpace></LeftSpace>
-            <RightMainWrapper>
       <BrowserRouter>
         <nav>
           <Link to="/">Home</Link><br></br>
@@ -27,8 +24,9 @@ return(
           <Route path="/social" element={<Social user={user}/>} />
         </Routes>
       </BrowserRouter>
-      </RightMainWrapper>
-      </GolbalNavWrapper>)}
+      // </RightMainWrapper>
+      // </GlobalWrapper>
+    )}
 
 
 export default Router;

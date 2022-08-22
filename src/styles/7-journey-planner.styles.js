@@ -61,8 +61,7 @@ export const JourneyWrapper = styled.div`
     .map{
 
         height: auto;
-        width: 100%;
-        background: black;
+        width: 70%;
         padding: 20px;
         display: flex;
         justify-content: center;
@@ -78,5 +77,16 @@ export const JourneyWrapper = styled.div`
 
     }
 
+    .oy-branch{
+
+        position: relative;
+        width: 400px;
+        height: 400px;
+
+    }
+
     
 `
+
+export const GoogleMap = styled.div``
+

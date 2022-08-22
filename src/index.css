@@ -12,36 +12,48 @@
   --ff-title: 'Allerta Stencil', sans-serif;
   --ff-three: 'Caveat', cursive;
 
+  --fs-h1: 3rem;
+  --fs-h2: 1.5rem;
+  --fs-h3: 1.2rem;
+  --fs-body: 1rem;
+
   --clr-text-dark: #000;
   --clr-text-light: #fff;
   --clr-background: #f0f0f0ff;
-  --clr-accent: #a3a3a3;
-  --clr-outline:#4c4c4c;
-  --clr-btn: #c685ff;
-
-  --fs-h1: 3rem;
-  --fs-h2: 2rem;
-  --fs-h3: 1.2rem;
-  --fs-body: 1rem;
+  --clr-accent: #ff9741;
+  --clr-outline:#fe0707;
+  --clr-btn: #d05000;
+  --clr-hl: #FBEDB8;
 }
 
 /* Changes the font size over 1080px */
 @media (min-width: 1080px){
   :root{
   --fs-h1: 3.5rem;
-  --fs-h2: 2.5rem;
+  --fs-h2: 2rem;
   --fs-h3: 1.5rem;
   --fs-body: 1.1rem;
   }
 }
 
-/* smooth transition between media queries */
-h1, h2, h3, p{transition: 0.7s}
+/* smooth transition between any changes (like media queries) */
+h1, h2, h3, p, body{transition: 0.7s}
 a, button{transition: 0.4s}
 
 /* smoothly animate the scroll position when the user clicks on a link within the same page */
 /* disable left and right scroll*/
-html {scroll-behavior: smooth; overflow-x: hidden;}
+/* Stops text from being highlighted */
+html {
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
+}
 
 /* applies root to body */
 body{
@@ -56,10 +68,10 @@ h2{font-size: var(--fs-h2); font-family: var(--ff-title);}
 h3{font-size: var(--fs-h3); font-family: var(--ff-title);}
 p{font-size: var(--fs-body); font-family: var(--ff-main);}
 
-img{display: block; max-height: 700px;}
+img{display: block; max-height: 500px;}
 section{margin: 30px;}
 a, a:link, a:visited{color: var(--clr-text-light); font-family: var(--ff-three);}
-a:hover, a:active{color: var(--clr-btn); cursor: pointer;}
+a:hover, a:active{color: var(--clr-btn); font-size: var(--fs-body); cursor: pointer;}
 button:hover{background: var(--clr-accent);}
 button{
   background: var(--clr-btn); 

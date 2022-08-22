@@ -1,10 +1,10 @@
 import React from 'react'
-import {GolbalNavWrapper, Column} from "../styles/global.styles.js"; //Golbal wrapper styles
+import {GNavWrapper, Column} from "../styles/global.styles.js"; //Global wrapper styles
 import {LeftNavWrapper} from "../styles/5-left-nav.styles";
 
 const LeftNav = () => {
   return (
-    <GolbalNavWrapper>
+    <GNavWrapper>
         <LeftNavWrapper>
             <div className="logo_wrapper">
                 <div className="logo"><img src="https://random.imagecdn.app/100/100" alt="random img"/></div>
@@ -12,15 +12,15 @@ const LeftNav = () => {
             <div className="left-nav_wrapper">
                 <div className="link_wrapper">
                     <Column>
-                    <a>Lorem Ipsum</a>
-                    <a>Lorem Ipsum</a>
-                    <a>Lorem Ipsum</a>
-                    <a>Lorem Ipsum</a>
+                    <a>Home</a>
+                    <a>Local Interests</a>
+                    <a>Journey Planner</a>
+                    <a>E-Bikes</a>
                     </Column>
                 </div>
             </div>
         </LeftNavWrapper>
-    </GolbalNavWrapper>
+    </GNavWrapper>
   )
 }
 

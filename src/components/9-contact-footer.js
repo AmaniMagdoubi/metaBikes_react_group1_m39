@@ -1,10 +1,12 @@
 import React from 'react'
-import {TopBottomWrapper, Row, Column} from "../styles/global.styles.js"; //Golbal wrapper styles
+import {GlobalWrapper, LeftSpace, RightMainWrapper, Row, Column} from "../styles/global.styles.js"; //Global wrapper styles
 import {FooterWrapper} from "../styles/9-contact-footer.styles"
 
 const Footer = () => {
   return (
-    <TopBottomWrapper>
+    <GlobalWrapper>
+      <LeftSpace></LeftSpace>
+            <RightMainWrapper>
         <FooterWrapper>
             <div className="footer_wrapper">
                 <div className="footer_text">
@@ -21,8 +23,8 @@ const Footer = () => {
                 </div>
             </div>
         </FooterWrapper>
-
-    </TopBottomWrapper>
+        </RightMainWrapper>
+    </GlobalWrapper>
   )
 }
 

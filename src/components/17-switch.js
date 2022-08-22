@@ -1,5 +1,6 @@
 import React from "react";
 import {useState, } from 'react';
+import { GlobalWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
 
 
 import SignupOrLogin from "./1-signup";
@@ -29,12 +30,20 @@ const Switch = () => {
   }
 
   return (
+
+    <GlobalWrapper>
+<LeftSpace></LeftSpace>
+            <RightMainWrapper>
     
-      
-      <div user={user}>
+      {/* <SwitchWrapper> */}
+      <div className="switch_wrapper" user={user}>
         {component}
       
       </div>
+      {/* </SwitchWrapper> */}
+      </RightMainWrapper>
+
+     </GlobalWrapper>
 
       
   );
