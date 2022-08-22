@@ -5,6 +5,7 @@ import LeftNav from "./components/5-left-nav"
 import HomePage from "./pages/Home";
 import UserNav from "./components/3-user-nav"
 import Footer from "./components/9-contact-footer";
+import Weather from "./components/19-weatherApp";
 
 import JourneyPlanner from "./components/7-journey-planner";
 // import HomePage from "./pages/Home";
@@ -32,6 +33,7 @@ const App = ({user}) => {
 
         <About></About>
         <JourneyPlanner></JourneyPlanner>
+        <Weather/>
         <LocalInterests/>
         
         <Footer />
