@@ -28,9 +28,18 @@ export const FooterWrapper = styled.div`
 
     }
 
-    .footer_icons{
+    .footer_icons {
 
+        display: flex;
+        justify-content: space-between;
     }
 
+    .copyright_footer {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
 
 `
