@@ -4,11 +4,11 @@ import Profile from "../pages/Profile";
 import HomePage from "../pages/Home";
 import Ebike from "../pages/Ebike";
 import App from "../App";
+// import { GlobalWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
 
 const Router = ({user}) =>{
 
 return(
-<div>
       <BrowserRouter>
         <nav>
           <Link to="/">Home</Link><br></br>
@@ -23,7 +23,10 @@ return(
           <Route path="/ebike" element={<Ebike user={user}/>} />
           <Route path="/social" element={<Social user={user}/>} />
         </Routes>
-      </BrowserRouter></div>)}
+      </BrowserRouter>
+      // </RightMainWrapper>
+      // </GlobalWrapper>
+    )}
 
 
 export default Router;
