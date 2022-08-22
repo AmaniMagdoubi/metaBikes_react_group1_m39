@@ -1,1 +1,4 @@
 <img src="https://random.imagecdn.app/500/500" alt="random img"/>
+
+Host Your images online at https://postimages.org/
+Copy Direct link and paste between ""

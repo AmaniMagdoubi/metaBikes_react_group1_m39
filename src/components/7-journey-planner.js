@@ -1,7 +1,8 @@
 import React from "react"
-import "../index.css"; //Golbal styles
-import {GolbalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Golbal wrapper styles
+import "../index.css"; //Global styles
+import {GlobalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Global wrapper styles
 import {JourneyWrapper} from "../styles/7-journey-planner.styles";
+//https://react-google-maps-api-docs.netlify.app/
 
 import {
     Box,
@@ -73,7 +74,7 @@ import {
     
 
   return (
-    <GolbalWrapper>
+    <GlobalWrapper>
             <LeftSpace></LeftSpace>
             <RightMainWrapper>
 
@@ -84,6 +85,56 @@ import {
                         <div className="display_wrapper">
                             <div className="display_top">
                             <Row>
+                               <Box
+                              p={4}
+                              borderRadius='lg'
+                              m={4}
+                              bgColor='white'
+                              shadow='base'
+                              minW='container.md'
+                              zIndex='1'
+                            >
+                              <HStack spacing={2} justifyContent='space-between'>
+                                <Box flexGrow={1}>
+                                  <Autocomplete>
+                                    <Input type='text' placeholder='Origin' ref={originRef} />
+                                  </Autocomplete>
+                                </Box>
+                                <Box flexGrow={1}>
+                                  <Autocomplete>
+                                    <Input
+                                      type='text'
+                                      placeholder='Destination'
+                                      ref={destiantionRef}
+                                    />
+                                  </Autocomplete>
+                                </Box>
+
+                                <ButtonGroup>
+                                  <Button colorScheme='pink' type='submit' onClick={calculateRoute}>
+                                    Calculate Route
+                                  </Button>
+                                  <IconButton
+                                    aria-label='center back'
+                                    icon={<FaTimes />}
+                                    onClick={clearRoute}
+                                  />
+                                </ButtonGroup>
+                              </HStack>
+                              <HStack spacing={4} mt={4} justifyContent='space-between'>
+                                <Text>Distance: {distance} </Text>
+                                <Text>Duration: {duration} </Text>
+                                <IconButton
+                                  aria-label='center back'
+                                  icon={<FaLocationArrow />}
+                                  isRound
+                                  onClick={() => {
+                                    map.panTo(center)
+                                    map.setZoom(12)
+                                  }}
+                                />
+                              </HStack>
+                            </Box>
                                 <span>From: {}</span>
                                 <span>To: {}</span>
                                 <span>Distance: {}</span>
@@ -91,96 +142,40 @@ import {
                             </div>
                         </div>
 
-
-
-
-
                         <div className="map">
+                         
 
-                        <Box position='absolute' left={0} top={0} h='100vh' w='100vh'>
 
-        {/* Google Map Box */}
-        <GoogleMap
-          center={center}
-          zoom={12}
-          mapContainerStyle={{ width: '100vh', height: '100vh' }}
-          onLoad={map => setMap(map)}
-        >
-          <Marker position={center} />
-          {directionsResponse && (
-            <DirectionsRenderer directions={directionsResponse} />
-          )}
-        </GoogleMap>
-      </Box>
-      <Box
-        p={4}
-        borderRadius='lg'
-        m={4}
-        bgColor='white'
-        shadow='base'
-        minW='container.md'
-        zIndex='1'
-      >
-        <HStack spacing={2} justifyContent='space-between'>
-          <Box flexGrow={1}>
-            <Autocomplete>
-              <Input type='text' placeholder='Origin' ref={originRef} />
-            </Autocomplete>
-          </Box>
-          <Box flexGrow={1}>
-            <Autocomplete>
-              <Input
-                type='text'
-                placeholder='Destination'
-                ref={destiantionRef}
-              />
-            </Autocomplete>
-          </Box>
 
-          <ButtonGroup>
-            <Button colorScheme='pink' type='submit' onClick={calculateRoute}>
-              Calculate Route
-            </Button>
-            <IconButton
-              aria-label='center back'
-              icon={<FaTimes />}
-              onClick={clearRoute}
-            />
-          </ButtonGroup>
-        </HStack>
-        <HStack spacing={4} mt={4} justifyContent='space-between'>
-          <Text>Distance: {distance} </Text>
-          <Text>Duration: {duration} </Text>
-          <IconButton
-            aria-label='center back'
-            icon={<FaLocationArrow />}
-            isRound
-            onClick={() => {
-              map.panTo(center)
-              map.setZoom(12)
-            }}
-          />
-        </HStack>
-      </Box>
+                          <Box 
+                        // position='absolute' left={0} top={0} h='100vh' w='100vh'
+                        >
 
+                              {/* Google Map Box */}
+                              <GoogleMap
+                              className="oy-branch"
+                                center={center}
+                                zoom={12}
+                                mapContainerStyle={{ width: '100vh', height: '100vh' }}
+                                onLoad={map => setMap(map)}
+                              >
+                                <Marker position={center} />
+                                {directionsResponse && (
+                                  <DirectionsRenderer directions={directionsResponse} />
+                                )}
+                              </GoogleMap>
+                            </Box>
 
                         </div>
 
-
-
-
-
-
-
-
-                        <div className="weather_wrapper">
+                        {/* <div className="weather_wrapper">
                             <div className="weather_from"></div>
                             <div className="arrow"></div>
                             <div className="weather_to"></div>
-                        </div>
+                        </div> */}
 
                     </div>
-                    <div className="input_wrapper">
+                    {/* <div className="input_wrapper">
                         <div className="input">
                             <form>
                                 <input></input>
@@ -190,12 +185,12 @@ import {
                         <div className="results">
                             <div className="results_img"></div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 </JourneyWrapper>
 
             </RightMainWrapper>
-        </GolbalWrapper>
+        </GlobalWrapper>
 
     
 

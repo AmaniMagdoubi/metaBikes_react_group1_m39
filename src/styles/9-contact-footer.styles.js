@@ -3,7 +3,7 @@ import "../index.css";
 
 export const FooterWrapper = styled.div`
 
-    background: var(--clr-text-light);
+    background: var(--clr-accent);
     height: 10em;
     width: 100%;
     display: flex;

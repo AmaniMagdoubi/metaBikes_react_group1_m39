@@ -15,37 +15,46 @@ export const HomeWrapper = styled.div`
     margin: auto;
     padding: 15px;
     text-align: center;
-    background: var(--clr-accent);
+    
+    background: var(--clr-text-dark);
+    border-radius: 25px;
+
+    span img{
+      margin: auto;
+      width: 100%;
+      border-radius: 20px;
+    }
     
   }
 
   .title_wrapper{
     height: auto;
     width: auto;
-    margin-top: 10em;
-
-    img{
-      margin: auto;
-    }
+    padding: 8em 0px 5em;
+    background: var(--clr-btn);
+    border-radius: 25px 0px 25px;
     
   }
 
   .about_wrapper{
 
     background: var(--clr-text-light);
-    padding: 20px 30px;
-    border-radius: 50px;
-    background-image: url("https://postimg.cc/SYWYzmV8");
+    padding: 1em 30px 5em;
+    border-radius: 0px  0px  25px 25px;
+    /* background-image: url("https://postimg.cc/SYWYzmV8"); */
     background-size: cover;
-    /* width: 20em; */
-    /* text-align:left; */
-
+    width: 50%;
+    text-align:left;
+    position: absolute;
+    opacity: 0.7;
   }
 
   .productSection_wrapper{
+    
     width: inherit;
     margin: auto;
-    padding-top: 3em;
+    padding-top: 2em;
+    
 
       .productSection{
       display:flex;
@@ -64,7 +73,8 @@ export const HomeWrapper = styled.div`
       margin: 10px;
       display:flex;
       flex-direction: column;
-      border: solid 2px black;
+      border-radius: 25px 0px 25px 25px;
+      border: solid 2px var(--clr-outline);
       
     }
 
@@ -77,14 +87,8 @@ export const HomeWrapper = styled.div`
       left: 20px;
     }
 
-    #adobeExtension img{
+    #four img{
       left: 40px;
-    }
-
-    #iosApp img, #chromeExtension img{
-      left: 0px;
-      padding-top: 30px;
-      padding-bottom: 10px; 
     }
 
     .productText{
@@ -123,20 +127,15 @@ export const HomeWrapper = styled.div`
       justify-content: center;
     }
 
-    #androidApp span{
-      background-color: #C7F5EB;
-      color: #0D8161;
+    #three span{
+      background-color: var(--clr-hl);
+      color: var(--clr-btn);
     }
 
-    #figmaPlugin span{
-      background-color: #FFE5F4;
-      color: #CC0178;
-    }
-
-    #adobeExtension span{
+    #four span{
       width: 75px;
-      background-color: #FBEDB8;
-      color: #A98501;
+      background-color: var(--clr-hl);
+      color: var(--clr-btn);
     }
 
     /* Animation */
@@ -151,6 +150,7 @@ export const HomeWrapper = styled.div`
       width: 100%;
       height: 0;
       transition: .2s ease;
+      border-radius: 25px 0px 25px 25px;
     }
 
     .product:hover .overlay {
@@ -171,34 +171,13 @@ export const HomeWrapper = styled.div`
       -ms-transform: translate(-50%, -50%);
     }
 
-    #iosApp .overlay{
-      background-color: #bee4ff;
-      color:#0066FF;
+    .overlay{
+      background-color: var(--clr-hl);
     }
-
-    #androidApp .overlay{
-      background-color: #C7F5EB;
+    .overlayText {
+      color: var(--clr-btn);
     }
-    #androidApp .overlayText {
-      color: #0D8161;
-    }
-
-    #figmaPlugin .overlay {
-      background-color: #FFE5F4;
-    }
-    #figmaPlugin .overlayText {
-      color: #CC0178;
-    }
-
-    #chromeExtension .overlay{
-      background-color: #d9bcf9;
-      color: purple;
-    }
-
-    #adobeExtension .overlay{
-      background-color: #FBEDB8;
-      color: #A98501;
-    }
+    
   }
 
   .home-end_wrapper{

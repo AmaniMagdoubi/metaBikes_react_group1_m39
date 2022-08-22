@@ -19,7 +19,7 @@ export const UserWrapper = styled.div`
         align-items: center;
         justify-content: center;
         background: var(--clr-text-dark);
-        border-radius: 25px 0px 0px 25px;
+        border-radius: 50px 0px 0px 50px;
 
     }
 
