@@ -11,8 +11,12 @@ const Footer = () => {
             <div className="footer_wrapper">
                 <div className="footer_text">
                       
-                    <Row>
+                    <div className="header_text">
                     <h1>META BIKES</h1>
+                    </div>
+
+                    <Column>
+                    <div className="info_text">
                       <p>ADDRESS:
                         <br></br>
                         Manchester | Liverpool
@@ -50,12 +54,15 @@ const Footer = () => {
                           </a>
                         </div>
                       </p>
-                    </Row>
-                    <Row className="copyright_footer">
+
+                    </div>
+                    
+                    <div className="copyright_footer">
                       <div>
                         <p>(c) COPYRIGHT - META BIKES Team (Aidan, Amani, Cryshae, Paul and Seb) </p>
                       </div>
-                    </Row>
+                    </div>
+                    </Column>
                 </div>
             </div>
         </FooterWrapper>

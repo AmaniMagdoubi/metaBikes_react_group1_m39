@@ -4,7 +4,7 @@ import "../index.css";
 export const FooterWrapper = styled.div`
 
     background: var(--clr-accent);
-    height: 10em;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
@@ -12,20 +12,44 @@ export const FooterWrapper = styled.div`
 
     .footer_wrapper{
 
-        width: 80%;
+        width: 90%;
         display: flex;
         align-items: center;
+        padding-top: 10px;
 
     }
 
     .footer_text{
-
+        
         margin: auto;
+        display: flex;
+        flex-direction: row;
 
-        p{
-            margin: 20px;
+        p{margin: 15px;}
+
+        .header_text{
+            height: auto;
+            width:30%;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
+        .info_text{
+            height: auto;
+            width:auto;
+            display: flex;
+            flex-wrap: wrap;
+            
+
+        }
+
+        @media (max-width: 671px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
     }
 
     .footer_icons {
@@ -37,7 +61,7 @@ export const FooterWrapper = styled.div`
     .copyright_footer {
 
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         
     }
