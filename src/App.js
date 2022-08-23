@@ -18,6 +18,7 @@ import About from "./components/6-home-about";
 import Switch from "./components/17-switch";
 import LocalInterests from "./components/8-local-interests";
 
+
 const App = () => {
 
   // set modal button to show content on onclick
