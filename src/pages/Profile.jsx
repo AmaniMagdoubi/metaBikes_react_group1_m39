@@ -1,13 +1,14 @@
 import DeleteUser from "../components/15-delete-user";
 import UpdateUser from "../components/14-edit-user";
 import ListUsers from "../components/12-list-users";
+import LoginLogout from "../components/1-login-logout";
 import {useState, useEffect} from 'react';
 
 const Profile = ({user}) => {
 
 const [allUsers, setUsers]= useState(['']);
-  const [del, setDel]= useState();
-  const [upd, setUpd]= useState();
+const [del, setDel]= useState();
+const [upd, setUpd]= useState();
 
 
   return (
@@ -16,6 +17,7 @@ const [allUsers, setUsers]= useState(['']);
       
       
       {user ? <div><h1>{user} logged in</h1>
+      <LoginLogout setter={user}></LoginLogout>
       <ListUsers setter={setUsers} /> {allUsers.map((allUsers)=>(
         <ul>
           <h2>{allUsers}</h2>

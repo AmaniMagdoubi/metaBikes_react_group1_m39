@@ -39,7 +39,8 @@ const App = () => {
         <UserNav modalShow = {modalShow} modalOn={modalOn}/>
         <Themes modalOff = {modalOff} modalShow = {modalShow} modalOn={modalOn}/>
         <LeftNav />
-        {/* <Switch></Switch> */}
+        <Switch></Switch>
+        
         
         {/* <HomePage /> */}
 
