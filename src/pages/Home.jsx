@@ -38,9 +38,9 @@ const HomePage = () => {
     return (
       
       <div >
-             {/* <UserNav modalShow = {modalShow} modalOn={modalOn}/> */}
+             <UserNav modalShow = {modalShow} modalOn={modalOn}/> 
              <Themes modalOff = {modalOff} modalShow = {modalShow} modalOn={modalOn}/>
-        <LeftNav />
+            <LeftNav />
         {/* <Switch></Switch> */}
         
         {/* <HomePage /> */}
