@@ -18,10 +18,24 @@ import UserNav from "./components/3-user-nav";
 
 import JP from "./pages/JourneyPlanner";
 import LI from "./pages/LocalInterest";
+import Themes from "./components/10-themes";
 
 const App = () => {
   const [user, setUser] = useState("");
   const [logged, setLogged] = useState(false);
+  const [modalShow, setModalShow] = useState (false)
+  const modalOn = () => {
+      setModalShow(!modalShow)
+   };
+  const modalOff = () => {setModalShow(false)};
+  // const [themeShow, setThemeShow] = useState (false)
+  // const themeOn = () => {
+  //   // setThemeShow(!themeShow)
+  //     setThemeShow(click => !click)
+  //     // setThemeShow(true);
+  //   };
+  //   const themeOff = () => {setThemeShow(false)};
+   
 
   let component;
   let component2;
@@ -46,25 +60,23 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <GlobalWrapper>
-        <LeftSpace></LeftSpace>
-        <RightMainWrapper>
-          {/* <SwitchWrapper> /} */}
-          <div className="switch_wrapper" user={user}>
+
+
+          <p onClick={modalOn}>Login</p>
+          {modalShow ?<div className="switch_wrapper" user={user}>
             {component}, {component2}
-          </div>
-          {/* {/ </SwitchWrapper> */}
+          </div>: null}
+          <Themes />
+
           <Routes>
             <Route path="*" element={<HomePage />} />
             <Route path="/profile/*" element={<Profile user={user} />} />
-            {/* <Route path="/ebike" element={<Ebike/>} /> */}
             <Route path="/social" element={<Social user={user} />} />
             <Route path="/ebike" element={<Ebike user={user} />} />
             <Route path="/journeyplanner" element={<JP user={user} />} />
             <Route path="/localinterests" element={<LI user={user} />} />
           </Routes>
-        </RightMainWrapper>
-      </GlobalWrapper>
+          
     </BrowserRouter>
   );
 };

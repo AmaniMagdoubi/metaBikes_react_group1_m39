@@ -60,7 +60,6 @@ const LoginLogout = ({ setter, user }) => {
             </form>
           ) : (
             <>
-              <h1>{user} is logged in</h1>
               <button onClick={logoutHandler}>Logout</button>
             </>
           )}

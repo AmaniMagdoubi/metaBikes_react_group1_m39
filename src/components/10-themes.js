@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   GNavWrapper,
   LeftSpace,
@@ -7,7 +8,7 @@ import {
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { ThemeWrapper } from "../styles/10-themes.styles";
 
-const Themes = ({ modalShow, modalOff }) => {
+const Themes = ({themeOff, themeShow}) => {
   // Change theme functions
 
   function changeText1(newColorText1) {
@@ -54,63 +55,14 @@ const Themes = ({ modalShow, modalOff }) => {
     <GNavWrapper>
       <LeftSpace></LeftSpace>
       <RightMainWrapper>
-        {modalShow ? (
-          <ThemeWrapper>
+        {themeShow ?
+        <ThemeWrapper>
             <div className="theme_modal">
               <div class="theme-text">
                 <p>Pick a theme for your account:</p>
               </div>
               <div className="colour_links">
-                {/* Main theme found in index.css */}
-                <div
-                  className="colour_drop main_theme"
-                  onClick={() => {
-                    modalOff();
-                    changeText1("");
-                    changeText2("");
-                    changeBackground("");
-                    changeAccent("");
-                    changeOutline("");
-                    changeBtn("");
-                    changeHL("");
-                    changeHeading("");
-                    changeLink("");
-                  }}
-                ></div>
-
-                {/* Theme one "Blue" test*/}
-                <div
-                  className="colour_drop blue_theme"
-                  onClick={() => {
-                    modalOff();
-                    changeText1("#fff");
-                    changeText2("#03045e");
-                    changeBackground("#00b4d8");
-                    changeAccent("#5e60ce");
-                    changeOutline("#000814");
-                    changeBtn("#7209b7");
-                    changeHL("#caf0f8");
-                    changeHeading("Caveat");
-                    changeLink("Rajdhani");
-                  }}
-                ></div>
-
-                {/* Theme two test*/}
-                <div
-                  className="colour_drop pink_theme"
-                  onClick={() => {
-                    modalOff();
-                    changeText1("#ff006e");
-                    changeText2("#ffd166");
-                    changeBackground("#b5838d");
-                    changeAccent("#ffcdb2");
-                    changeOutline("#d90429");
-                    changeBtn("#6d6875");
-                    changeHL("#006d77");
-                    changeHeading("");
-                    changeLink("");
-                  }}
-                ></div>
+                
                         {/* Main theme found in index.css */}
                         <div className="colour_drop main_theme" onClick={() => {modalOff(); changeText1(''); changeText2('');changeBackground(''); changeAccent(''); changeOutline(''); changeBtn(''); changeHL(''); changeHeading(''); changeLink('');}}></div>
                            
@@ -137,7 +89,7 @@ const Themes = ({ modalShow, modalOff }) => {
               </div>
             </div>
           </ThemeWrapper>
-        ) : null}
+          : null}
       </RightMainWrapper>
     </GNavWrapper>
   );

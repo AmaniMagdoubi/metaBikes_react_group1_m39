@@ -3,7 +3,7 @@ import ListUsers from "./12-list-users";
 import DeleteUser from "./15-delete-user";
 import UpdateUser from "./14-edit-user";
 
-const UserProfile = ({ user }) => {
+const UserProfile = ({ user}) => {
   console.log(user);
 
   const [allUsers, setUsers] = useState([""]);
@@ -24,7 +24,7 @@ const UserProfile = ({ user }) => {
           <UpdateUser setter={setUpd}>User updated: {upd}</UpdateUser>
         </div>
       ) : (
-        <h1>not logged in</h1>
+        <p>Login or Sign up</p>
       )}
     </div>
   );
