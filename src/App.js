@@ -1,66 +1,72 @@
 import React from "react";
 import "./index.css";
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import { useState } from "react";
-
-import LeftNav from "./components/5-left-nav"
-import HomePage from "./pages/Home";
-import UserNav from "./components/3-user-nav"
-import Themes from "./components/10-themes";
-import Footer from "./components/9-contact-footer";
-import Weather from "./components/19-weatherApp";
-
-import JourneyPlanner from "./components/7-journey-planner";
-// import HomePage from "./pages/Home";
-import About from "./components/6-home-about";
-// import SignupOrLogin from "./components/1-signup";
-// import Router from "../components/16-router";
-
+import HomePage from "./pages/Home"
+import Profile from "./pages/Profile";
+import Social from "./pages/Social";
+import Ebike from "./pages/Ebike"
 import Switch from "./components/17-switch";
-import LocalInterests from "./components/8-local-interests";
-
+import SignupOrLogin from "./components/1-signup";
+import Router from "./components/16-router";
+import { GlobalWrapper } from "./styles/global.styles";
+import { LeftSpace } from "./styles/global.styles";
+import { RightMainWrapper } from "./styles/global.styles";
 
 const App = () => {
-
-  // set modal button to show content on onclick
-  const [modalShow, setModalShow] = useState (false)
-  const modalOn = () => {
-      setModalShow(!modalShow)
-      // setModalShow(click => !click)
-      // setModalShow(true);
-  };
-  // Set modal button to hide content on onclick
-  const modalOff = () => {setModalShow(false)};
+  const [user, setUser]= useState('')
+  const [logged, setLogged]= useState(false)
+  
+  let component;
+  
+  switch (!logged && !user){
+    case !logged:
+      console.log('signup');
+      component = <SignupOrLogin setter={setUser}></SignupOrLogin>;
+      break;
+    case logged && user:
+      console.log('router');
+      component = <Router user={user}></Router>
+      break;
+    default :
+      console.log('default');
+      component =
+      <SignupOrLogin setter={setUser}></SignupOrLogin>
+      break;
+  }
+ 
 
   return (
 
     
+    <BrowserRouter>
+        <GlobalWrapper>
+<LeftSpace></LeftSpace>
+            <RightMainWrapper>
+    
+      {/* <SwitchWrapper> */}
+      <div className="switch_wrapper" user={user}>
+        {component}
       
-      <div>
-
-        <UserNav modalShow = {modalShow} modalOn={modalOn}/>
-        <Themes modalOff = {modalOff} modalShow = {modalShow} modalOn={modalOn}/>
-        <LeftNav />
-        <Switch></Switch>
-        
-        {/* <HomePage /> */}
-
-
-        <About></About>
-
-        <LocalInterests/>
-        <JourneyPlanner></JourneyPlanner>
-        
-        
-        <Footer />
-
       </div>
+      {/* </SwitchWrapper> */}
+      </RightMainWrapper>
 
+     </GlobalWrapper>
+        <Routes>
+          <Route  path="*" element={<HomePage />} />
+          <Route path="/profile/*" element={<Profile user={user}/>} />
+          {/* <Route path="/ebike" element={<Ebike/>} /> */}
+          <Route path="/social" element={<Social user={user}/>} />
+          <Route path="/ebike" element={<Ebike user={user}/>} />
+        </Routes>
+      </BrowserRouter>
       
      
     
   );
 
-};
+};  
 
 
 export default App;
