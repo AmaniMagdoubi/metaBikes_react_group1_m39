@@ -7,52 +7,54 @@ import Profile from "./pages/Profile";
 import Social from "./pages/Social";
 import Ebike from "./pages/Ebike"
 import Switch from "./components/17-switch";
-import SignupOrLogin from "./components/1-signup";
+// import SignupOrLogin from "./components/1-signup";
 import Router from "./components/16-router";
 import { GlobalWrapper } from "./styles/global.styles";
 import { LeftSpace } from "./styles/global.styles";
 import { RightMainWrapper } from "./styles/global.styles";
+import Signup from "./components/1-signup";
+import LoginLogout from "./components/1-login-logout";
+
 
 const App = () => {
   const [user, setUser]= useState('')
   const [logged, setLogged]= useState(false)
-  
+
   let component;
-  
+  let component2;
+
   switch (!logged && !user){
     case !logged:
       console.log('signup');
-      component = <SignupOrLogin setter={setUser}></SignupOrLogin>;
+      component = <Signup setter={setUser}></Signup>;
+      component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     case logged && user:
       console.log('router');
       component = <Router user={user}></Router>
+      component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     default :
       console.log('default');
       component =
-      <SignupOrLogin setter={setUser}></SignupOrLogin>
+      <Signup setter={setUser}></Signup>;
+      component2 =
+      <LoginLogout setter={setUser}></LoginLogout>;
       break;
   }
- 
 
-  return (
+  return (<BrowserRouter>
 
-    
-    <BrowserRouter>
         <GlobalWrapper>
-<LeftSpace></LeftSpace>
+            <LeftSpace></LeftSpace>
             <RightMainWrapper>
-    
-      {/* <SwitchWrapper> */}
-      <div className="switch_wrapper" user={user}>
-        {component}
-      
-      </div>
-      {/* </SwitchWrapper> */}
-      </RightMainWrapper>
 
-     </GlobalWrapper>
+      {/* <SwitchWrapper> /} */}
+      <div className="switch_wrapper" user={user}>
+        {component}, {component2}
+
+      </div>
+      {/* {/ </SwitchWrapper> */}
         <Routes>
           <Route  path="*" element={<HomePage />} />
           <Route path="/profile/*" element={<Profile user={user}/>} />
@@ -60,6 +62,11 @@ const App = () => {
           <Route path="/social" element={<Social user={user}/>} />
           <Route path="/ebike" element={<Ebike user={user}/>} />
         </Routes>
+      
+
+      </RightMainWrapper>
+
+      </GlobalWrapper>
       </BrowserRouter>
       
      

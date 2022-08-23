@@ -2,6 +2,7 @@ import React from "react";
 import {useState, } from 'react';
 import { GlobalWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
 import LoginLogout from "./1-login-logout";
+import UserNav from "./3-user-nav";
 
 
 import Signup from "./1-signup";
@@ -22,8 +23,7 @@ const Switch = () => {
       component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     case logged && user:
-      console.log('router');
-      component = <Router user={user}></Router>
+      component = <UserNav user={user}></UserNav>
       component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     default :

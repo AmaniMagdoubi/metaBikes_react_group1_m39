@@ -1,9 +1,10 @@
 import React from 'react'
+import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import {GNavWrapper, Row} from "../styles/global.styles.js"; //Global wrapper styles
 import {UserWrapper} from "../styles/3-user-nav.styles";
 import "../index.css";
 
-const UserNav = ({modalOn}) => {
+const UserNav = ({modalOn, user}) => {
   
   return (
     <GNavWrapper>
@@ -16,8 +17,13 @@ const UserNav = ({modalOn}) => {
                     
                     <a>Community</a>
                     <a>Profile</a>
-                    {/* <a><Link to="/profile" user={user}>Profile</Link></a>
-                    <a><Link to="/social" user={user}>Community</Link></a> */}
+                    <nav >
+                    <Link to="/" user={user}>Home</Link><br></br>
+                    <Link to="/profile" user={user}>Profile Details</Link><br></br>
+                    <Link to="/social" user={user}>Social App</Link><br></br>
+                    <Link to="/ebike" user={user}>E-Bike</Link><br></br>
+                    <h1>{user} logged in</h1>
+                  </nav>
                     
                 </div>
                 <div class="header-verline"></div>

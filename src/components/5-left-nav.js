@@ -2,8 +2,9 @@ import React from 'react'
 import {GNavWrapper, Column} from "../styles/global.styles.js"; //Global wrapper styles
 import {LeftNavWrapper} from "../styles/5-left-nav.styles";
 import Image from "../assets/meta bikes-header-logo.png"; 
+import {Link} from "react-router-dom";
 
-const LeftNav = () => {
+const LeftNav = ({user}) => {
   return (
     <GNavWrapper>
         <LeftNavWrapper>
@@ -13,17 +14,10 @@ const LeftNav = () => {
             <div className="left-nav_wrapper">
                 <div className="link_wrapper">
                     <Column>
-                    <a>Home</a>
+                    <Link to="/" user={user}>Home</Link>
                     <a>Local Interests</a>
                     <a>Journey Planner</a>
-                    <a>E-Bikes</a>
-                    {/* <nav>
-                        <a><Link to="/" user={user}>Home</Link><br></br></a>
-                        <a><Link to="/" user={user}>Local Interests</Link><br></br></a>
-                        <a><Link to="/" user={user}>Journey Planner</Link><br></br></a>
-                        <a> <Link to="/ebike" user={user}>E-Bike</Link><br></br></a>
-                        <h1>{user} logged in</h1>
-                    </nav> */}
+                    <Link to="/ebike" user={user}>E-Bike</Link>
                     </Column>
                 </div>
             </div>
