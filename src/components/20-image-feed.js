@@ -7,7 +7,6 @@ import Faker from './21-faker';
 import InstaImg from './22-insta-image';
 import CatCard from './22-insta-image';
 
-
 const ImageFeed = ({user, pics}) => {
   const [myPics, setMyPics] = useState([]);
   const [display, setDisplay]= useState(false);
@@ -40,12 +39,7 @@ const ImageFeed = ({user, pics}) => {
             <InstaImg author= {item.author} imgURL={item.download_url} key={index}/>            
             </div>
           )
-        })
-       
-      
-        
-        
-      
+        })          
     }</div> 
     :
     <h1>not logged in</h1>}
@@ -54,41 +48,3 @@ const ImageFeed = ({user, pics}) => {
 }
 
 export default ImageFeed;
-
-
-// function ImageFeed(){
-//   const [cat, setCat] = useState("");
-
-//   const [error, setError] = useState('');
-//   try{
-//     const getCat = async () => {
-//       let res = await fetch("https://api.thecatapi.com/v1/images/search?limit=20");
-//       if (!res.ok){throw new Error(res.statusText);}
-//       console.log(res);
-//       let data = await res.json();
-      
-//       let urlCopies = data.map((item) => { return item.url });
-//       fakerData = fakerData.map((cat, index) => {
-//         cat.image = urlCopies[index];
-//         cat.id = index;
-//         return cat;
-//       });
-//       setCat(fakerData);
-//     };
-//       useEffect(() => { getCat(); }, []);
-//     }catch (err){setError('Could not find picture');}
-
-// if (!cat){return <p>loading</p>};
-// return (
-//     <div className="heightOfPage">
-//         <div className='left-page'>
-//         {cat.map((item, index) => {
-//             return (
-//             <CatCard cat={item} imgURL={item.image} key={index} />);
-// })}</div>
-        
-//     </div>
-// )
-// }
-
-// export default ImageFeed;
