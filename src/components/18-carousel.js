@@ -20,7 +20,7 @@ class CarouselItems extends Component {
         items: [
             // Follow this link to change photo --> https://picsum.photos/images#6
             // Change photo by changing the first number in the links below = id
-            {id: 1, title:"item #1",url:"https://picsum.photos/id/1022/1500/1000"}, 
+            {id: 1, title:"item #1",url:"https://picsum.photos/id/191/1500/1000"}, 
             {id: 2, title:"item #2",url:"https://picsum.photos/id/1035/1500/1000"}, 
             {id: 3, title:"item #3",url:"https://picsum.photos/id/191/1500/1000"}, 
             {id: 4, title:"item #4",url:"https://picsum.photos/id/164/1500/1000"}, 

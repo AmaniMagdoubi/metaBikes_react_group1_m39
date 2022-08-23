@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import "../index.css";
 
+
+
 export const JourneyWrapper = styled.div`
 
     height: 100%;
@@ -15,182 +17,196 @@ export const JourneyWrapper = styled.div`
         margin: auto;
         padding: 5px;
         text-align: center;
-    }
+        display: flex;
+        flex-direction: column;
 
-    .map_wrapper{
-
-        height: auto;
-        width: 100%;
-        margin: auto;
-        padding: 20px;
-        text-align: center;
-        background: var(--clr-text-dark);
-
-    }
-
-    .display_wrapper{
-
-        background: var(--clr-text-light);
-        height: 4em;
-        width: 100%;
-        display: table;
-        border-radius: 25px;
+        .text_wrapper{
+          padding: 10px;
+        }
     }
 
     .display_top{
 
-        display: table-cell;
-        vertical-align: middle;
+      height: auto;
+      width: 100%;
+      margin-bottom: 6px;
+      padding: 20px;
+      text-align: center;
+      background: var(--clr-accent);
+      border-radius: 25px;
+      
+      
 
 
-        span{
-            height: 100%;
-            width: 40%;
-            padding-left: 10px;
-            margin: auto;
-            text-align: left;
-        }
-
-        .header-horLine{
-            width: 100%;
-            height: 1px;
-            background-color: var(--clr-outlines);
-        }
-    }
-
-    .map{
-
-        height: auto;
-        width: 70%;
-        padding: 20px;
+      .input_wrapper{
+        
         display: flex;
-        justify-content: center;
+        background: var(--clr-text-light);
+        border-radius: 25px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @media (max-width: 807px) {
+          flex-direction: column;
+        }
+
+      .button_wrapper{
+
+        display: flex;
+        flex-direction: row;
+        .button{margin: 10px;}
+
+      }
 
     }
 
-    .input_wrapper{
+    .from_input, .to_input {
 
-        height: 300px;
-        width: 300px;
-        margin: auto;
-        background: purple;
+        padding: 6px 20px;
+        font: var(--ff-main);
+        border-radius: 25px;
+        border: none;
+        border: 1px solid var(--clr-outline);
+        background: var(--clr-text-light);
+        @media (max-width: 807px) {
+          margin: 10px;
+        }
+
+        ::placeholder {
+          color: var(--clr-text-dark);
+          opacity: 1; 
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: var(--clr-text-dark);
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+        color: var(--clr-text-dark);
+        }
+        }
+    }
+
+    .output_wrapper{
+
+        display: flex;
+        flex-direction: row;
+        .output, .icon{margin: 10px 20px 8px;}
+        .output{
+          border: 1px solid var(--clr-outline);
+          padding: 6px 100px 6px 20px ;
+          border-radius: 25px;
+        }
+
+        @media (max-width: 807px) {
+          flex-direction: column-reverse;
+          margin: 20px;
+        }
 
     }
 
 
-    .oy-branch{
+    .display_middle{
 
-        position: relative;
-        width: 400px;
-        height: 400px;
-
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      background: var(--clr-text-dark);
     }
 
-    //start of weather app styling
+    #map{
 
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      /* height: 50em !important; */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+      
+    }
 
-body {
-  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  
+  
+`
 
-p {
-  font-size: 1.6rem;
-}
 
-h1 {
-  font-size: 6rem;
-}
 
-.weatherApp {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: rgba(0,0,0,0.4);
-  color: #fff;
-}
 
-.weatherApp:before {
-  content: '';
-  background: url('./assets/stelvio.jpg') no-repeat center center/cover;
-  position: absolute;
-  width: 100%;
+
+
+
+
+export const WeatherApp = styled.div`
+
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  width: 100%;
+
+.weather_app {
+  width: 100%;
+  height: auto;
+  margin-top: 6px;
+  background: var(--clr-text-light);
 }
 
-.weatherApp .search {
+.search {
   text-align: center;
-  padding: 1rem;
+  padding: 1em;
 }
 
-.weatherApp input {
-  padding: .7rem 1.5rem;
-  font-size: 1.2rem;
+.weather_app input {
+  padding: 6px 20px;
+  font: var(--ff-main);
+
   border-radius: 25px;
-  border: 1px solid rgba(255,255,255, 0.8);
-  background: rgba(255,255,255, 0.1);
-  color: #f8f8f8;
-}
+  border: 1px solid var(--clr-accent);
+  background: rgba(255,255,255, 0.2);
+  ::placeholder {
+    color: var(--clr-text-dark);
+    opacity: 1; 
+  }
 
-::placeholder {
-  color: #f8f8f8;
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--clr-text-dark);
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--clr-text-dark);
+  }
 }
 
 .container {
-  max-width: 700px;
-  height: 700px;
+  width: auto;
+  /* height: 15em; */
+  height: auto;
   margin: auto;
-  padding: 0 1rem;
-  position: relative;
+  padding: 1em;
   top: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  background: var(--clr-accent);
+  
+  /* @media (max-width: 700px) {height: 25em;} */
 }
 
-.weatherApp .top {
+.top {
   width: 100%;
-  margin: 1rem auto;
+  margin: 1em auto;
 }
 
-.weatherApp .description {
-  position: relative;
-  right: -90%;
-  transform-origin: 0 0;
-  transform: rotate(269deg);
-}
-
-.weatherApp .bottom {
+.bottom {
   display: flex;
   justify-content: space-evenly;
-  text-align: center;
-  width: 100%;
-  margin: 1rem auto;
-  padding: 1rem;
+  padding: 1em;
   border-radius: 12px;
   background-color: rgba(255,255,255, 0.2);
+  @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 50%;
+      height: auto;
+      .humidity{
+        margin: 25px auto;
+      }
+  }
 }
 
-.bold {
-  font-weight: 700;
-}
-
-
-    
 `
-
-export const GoogleMap = styled.div``
 
