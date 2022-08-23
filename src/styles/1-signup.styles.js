@@ -12,7 +12,7 @@ export const SignupWrapper = styled.div`
     }
 
     button:hover {
-        background-color: white;
+        background-color: var(--clr-accent);
         color: black;
     }
 
