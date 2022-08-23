@@ -39,7 +39,7 @@ const App = () => {
         <UserNav modalShow = {modalShow} modalOn={modalOn}/>
         <Themes modalOff = {modalOff} modalShow = {modalShow} modalOn={modalOn}/>
         <LeftNav />
-        {/* <Switch></Switch> */}
+        <Switch></Switch>
         
         {/* <HomePage /> */}
 
@@ -47,7 +47,8 @@ const App = () => {
         <About></About>
 
         <LocalInterests/>
-        {/* <JourneyPlanner></JourneyPlanner> */}
+        <JourneyPlanner></JourneyPlanner>
+        
         
         <Footer />
 

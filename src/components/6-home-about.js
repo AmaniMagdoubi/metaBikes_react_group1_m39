@@ -21,7 +21,7 @@ const About = () => {
                             <h3>WELCOME TO META BIKES</h3> 
                             <p>Your all-in-one platform whether you are a professional or hobbyist biker. We're touring-friendly and here to help you every step of the way. Plan your eagerly-awaited adventure, join our community and sell, buy and share gear on our e-Bike store!</p>
                         </div>
-                        <span><img src="https://random.imagecdn.app/2000/900" alt="random img"/></span>
+                        <span><img src="https://picsum.photos/id/191/2000/1000" alt="random img"/></span>
                     </Column>
                     <Row>
                         <div class="productSection_wrapper">
@@ -30,7 +30,7 @@ const About = () => {
                                 <div class="product" id="two">
 
                                     <div class="addTag">
-                                        <img src="https://random.imagecdn.app/600/600" alt="random img"/>
+                                        <img src="https://picsum.photos/id/191/500/500" alt="random img"/>
                                         <span></span>
                                     </div>
                                     <div class="productText">

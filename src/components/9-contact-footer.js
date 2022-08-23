@@ -15,7 +15,7 @@ const Footer = () => {
                     <h1>META BIKES</h1>
                     </div>
 
-                    <Column>
+                    <Column className="right_text">
                     <div className="info_text">
                       <p>ADDRESS:
                         <br></br>

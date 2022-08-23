@@ -16,6 +16,13 @@ const LeftNav = () => {
                     <a>Local Interests</a>
                     <a>Journey Planner</a>
                     <a>E-Bikes</a>
+                    {/* <nav>
+                        <a><Link to="/" user={user}>Home</Link><br></br></a>
+                        <a><Link to="/" user={user}>Local Interests</Link><br></br></a>
+                        <a><Link to="/" user={user}>Journey Planner</Link><br></br></a>
+                        <a> <Link to="/ebike" user={user}>E-Bike</Link><br></br></a>
+                        <h1>{user} logged in</h1>
+                    </nav> */}
                     </Column>
                 </div>
             </div>

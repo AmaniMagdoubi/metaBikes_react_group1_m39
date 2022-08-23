@@ -59,6 +59,12 @@ export const ThemeWrapper = styled.div`
             .blue_theme{background: #00b4d8;}
             .blue_theme:hover{ animation: bluetheme 3s infinite;}
             /* .blue_theme{ animation: bluetheme 3s infinite;} */
+
+            @keyframes bluetheme {0%{background: #00b4d8;}20%{background: #caf0f8;}40%{background: #00b4d8;}60%{background: #5e60ce;}80%{background: #7209b7;}90%{background: #00b4d8;}100%{background: #00b4d8;}}
+            .pink_theme{background: #ffb5a7;}
+            .pink_theme:hover{ animation: bluetheme 3s infinite;}
+            /* .blue_theme{ animation: bluetheme 3s infinite;} */
+
             
         }
      
