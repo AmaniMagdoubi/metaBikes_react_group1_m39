@@ -5,11 +5,13 @@ import LoginLogout from "../components/1-login-logout";
 import { useState, useEffect } from "react";
 
 import UserProfile from "../components/13-user-profile";
+import Footer from "../components/9-contact-footer";
 
 const Profile = ({ user }) => {
   return (
     <div>
       <UserProfile user={user}></UserProfile>
+      <Footer></Footer>
     </div>
   );
 };
