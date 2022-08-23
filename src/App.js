@@ -6,7 +6,7 @@ import HomePage from "./pages/Home"
 import Profile from "./pages/Profile";
 import Social from "./pages/Social";
 import Ebike from "./pages/Ebike"
-import Switch from "./components/17-switch";
+
 // import SignupOrLogin from "./components/1-signup";
 import Router from "./components/16-router";
 import { GlobalWrapper } from "./styles/global.styles";
@@ -14,6 +14,11 @@ import { LeftSpace } from "./styles/global.styles";
 import { RightMainWrapper } from "./styles/global.styles";
 import Signup from "./components/1-signup";
 import LoginLogout from "./components/1-login-logout";
+import UserNav from "./components/3-user-nav";
+
+
+import JP from "./pages/JourneyPlanner";
+import LI from "./pages/LocalInterest";
 
 
 const App = () => {
@@ -31,7 +36,7 @@ const App = () => {
       break;
     case logged && user:
       console.log('router');
-      component = <Router user={user}></Router>
+      component = <UserNav user={user}></UserNav>
       component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     default :
@@ -61,6 +66,8 @@ const App = () => {
           {/* <Route path="/ebike" element={<Ebike/>} /> */}
           <Route path="/social" element={<Social user={user}/>} />
           <Route path="/ebike" element={<Ebike user={user}/>} />
+          <Route path="/journeyplanner" element={<JP user={user}/>} />
+          <Route path="/localinterests" element={<LI user={user}/>} />
         </Routes>
       
 

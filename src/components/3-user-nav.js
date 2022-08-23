@@ -15,16 +15,12 @@ const UserNav = ({modalOn, user}) => {
                     
                     <a onClick = {modalOn}>Themes</a>
                     
-                    <a>Community</a>
-                    <a>Profile</a>
-                    <nav >
                     <Link to="/" user={user}>Home</Link><br></br>
                     <Link to="/profile" user={user}>Profile Details</Link><br></br>
                     <Link to="/social" user={user}>Social App</Link><br></br>
                     <Link to="/ebike" user={user}>E-Bike</Link><br></br>
                     <h1>{user} logged in</h1>
-                  </nav>
-                    
+                                      
                 </div>
                 <div class="header-verline"></div>
                 <div className="user_display">

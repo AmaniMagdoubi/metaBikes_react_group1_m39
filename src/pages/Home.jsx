@@ -3,7 +3,7 @@ import "../index.css";
 import { useState } from "react";
 import About from "../components/6-home-about";
 import JourneyPlanner from "../components/7-journey-planner";
-import Switch from "../components/17-switch";
+
 
 
 import LeftNav from "../components/5-left-nav"
@@ -48,9 +48,9 @@ const HomePage = () => {
         
         <About></About>
 
-        <LocalInterests/>
-        <JourneyPlanner></JourneyPlanner>
-        <Weather></Weather>
+        
+        
+        {/* <Weather></Weather> */}
         
         <Footer />
   

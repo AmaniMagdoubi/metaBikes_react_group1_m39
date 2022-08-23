@@ -15,9 +15,10 @@ const LeftNav = ({user}) => {
                 <div className="link_wrapper">
                     <Column>
                     <Link to="/" user={user}>Home</Link>
-                    <a>Local Interests</a>
-                    <a>Journey Planner</a>
-                    <Link to="/ebike" user={user}>E-Bike</Link>
+                    
+                    <Link to="/journeyplanner" user={user}>Journey Planner</Link>
+                    <Link to="/ebike" user={user}>MetaBikes Shop</Link>
+                    <Link to="/localinterests" user={user}>Local Interests</Link>
                     </Column>
                 </div>
             </div>
