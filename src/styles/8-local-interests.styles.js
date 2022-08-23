@@ -15,7 +15,6 @@ export const InterestWrapper = styled.div`
         margin: auto;
         padding: 15px;
         text-align: center;
-        background: var(--clr-background);
         display: flex;
         flex-direction: column;
 
@@ -26,6 +25,7 @@ export const InterestWrapper = styled.div`
         width: 90%;
         height: auto;
         margin: auto;
+        
 
         //Change carousel arrows
 

@@ -13,8 +13,11 @@ const UserNav = ({modalOn}) => {
                 <div className="user_links">
                     
                     <a onClick = {modalOn}>Themes</a>
+                    
                     <a>Community</a>
                     <a>Profile</a>
+                    {/* <a><Link to="/profile" user={user}>Profile</Link></a>
+                    <a><Link to="/social" user={user}>Community</Link></a> */}
                     
                 </div>
                 <div class="header-verline"></div>

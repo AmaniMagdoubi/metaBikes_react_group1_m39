@@ -3,6 +3,7 @@ import "../index.css"; //Global styles
 import {GlobalWrapper, LeftSpace, RightMainWrapper, Row} from "../styles/global.styles.js"; //Global wrapper styles
 import {JourneyWrapper} from "../styles/7-journey-planner.styles";
 //https://react-google-maps-api-docs.netlify.app/
+import Weather from "./19-weatherApp";
 
 import {
     Box,
@@ -70,6 +71,13 @@ import {
       originRef.current.value = ''
       destiantionRef.current.value = ''
     }
+
+      const mapContainerStyle = {
+        Maxwidth: '100vh',
+        height: '45vh',
+        };
+
+        
   
     
 
@@ -80,51 +88,61 @@ import {
 
                 <JourneyWrapper>
                 <div className="Journey_wrapper">
-                    <div className="map_wrapper">
 
-                        <div className="display_wrapper">
-                            <div className="display_top">
-                            <Row>
-                               <Box
-                              p={4}
-                              borderRadius='lg'
-                              m={4}
-                              bgColor='white'
-                              shadow='base'
-                              minW='container.md'
-                              zIndex='1'
-                            >
-                              <HStack spacing={2} justifyContent='space-between'>
-                                <Box flexGrow={1}>
-                                  <Autocomplete>
-                                    <Input type='text' placeholder='Origin' ref={originRef} />
-                                  </Autocomplete>
-                                </Box>
-                                <Box flexGrow={1}>
-                                  <Autocomplete>
-                                    <Input
-                                      type='text'
-                                      placeholder='Destination'
-                                      ref={destiantionRef}
-                                    />
-                                  </Autocomplete>
-                                </Box>
+                  <div className="text_wrapper">
+                    <h1>Plan your journey</h1>
+                    <p></p>
+                  </div>
+                    
+                  <div className="display_top">
 
-                                <ButtonGroup>
-                                  <Button colorScheme='pink' type='submit' onClick={calculateRoute}>
-                                    Calculate Route
-                                  </Button>
-                                  <IconButton
-                                    aria-label='center back'
-                                    icon={<FaTimes />}
-                                    onClick={clearRoute}
-                                  />
-                                </ButtonGroup>
-                              </HStack>
-                              <HStack spacing={4} mt={4} justifyContent='space-between'>
-                                <Text>Distance: {distance} </Text>
-                                <Text>Duration: {duration} </Text>
-                                <IconButton
+                        <HStack className="input_wrapper">
+
+                            <div className="from_wrapper">
+                              <Autocomplete>
+                                <Input className="from_input"
+                                  type='text' 
+                                  placeholder='From:' 
+                                  ref={originRef} 
+                                />
+                              </Autocomplete>
+                            </div>
+
+                            <div className="to_wrapper">
+                              <Autocomplete>
+                                <Input className="to_input"
+                                  type='text'
+                                  placeholder='To:'
+                                  ref={destiantionRef}
+                                />
+                              </Autocomplete>
+                            </div>
+
+                            <div className="button_wrapper"> 
+                            <div className="button">
+                              <Button 
+                                type='submit' 
+                                onClick={calculateRoute}>
+                                <p>Calculate Route</p>
+                              </Button>
+                            </div>
+
+                              
+                            <div className="button">
+                              <IconButton
+                                aria-label='center back'
+                                icon={<FaTimes />}
+                                onClick={clearRoute}
+                              />
+                            </div>
+                            </div>
+
+                            <div className="output_wrapper">
+                            
+                              <div className="output"><Text>Distance: {distance} </Text></div>
+                              <div className="output"><Text>Duration: {duration} </Text></div>
+
+                              <div className="icon"><IconButton
                                   aria-label='center back'
                                   icon={<FaLocationArrow />}
                                   isRound
@@ -132,69 +150,76 @@ import {
                                     map.panTo(center)
                                     map.setZoom(12)
                                   }}
-                                />
-                              </HStack>
-                            </Box>
-                                <span>From: {}</span>
-                                <span>To: {}</span>
-                                <span>Distance: {}</span>
-                            </Row>
+                                /></div>
+
                             </div>
-                        </div>
 
-                        <div className="map">
-                         
+                        </HStack>
+
+                        
+
+                  </div>
+
+
+                  <div className="display_middle">
 
 
 
-                          <Box 
-                        // position='absolute' left={0} top={0} h='100vh' w='100vh'
+                    <div className="map_wrapper">
+                      
+                        <GoogleMap id="map"
+                        // className="map"
+                        center={center}
+                        zoom={12}
+                        mapContainerStyle={mapContainerStyle}
+                        onLoad={map => setMap(map)}
                         >
 
-                              {/* Google Map Box */}
-                              <GoogleMap
-                              className="oy-branch"
-                                center={center}
-                                zoom={12}
-                                mapContainerStyle={{ width: '100vh', height: '100vh' }}
-                                onLoad={map => setMap(map)}
-                              >
-                                <Marker position={center} />
-                                {directionsResponse && (
-                                  <DirectionsRenderer directions={directionsResponse} />
-                                )}
-                              </GoogleMap>
-                            </Box>
+                        <Marker position={center} />
+                        {directionsResponse && ( <DirectionsRenderer directions={directionsResponse} />)}
 
-                        </div>
+                        </GoogleMap>
 
-                        {/* <div className="weather_wrapper">
-                            <div className="weather_from"></div>
-                            <div className="arrow"></div>
-                            <div className="weather_to"></div>
-                        </div> */}
-
+                      
                     </div>
-                    {/* <div className="input_wrapper">
-                        <div className="input">
-                            <form>
-                                <input></input>
-                                <input></input>
-                            </form>
-                        </div>
-                        <div className="results">
-                            <div className="results_img"></div>
-                        </div>
-                    </div> */}
+
+
+
+                  </div>
+
+                        
+                  <div className="display_bottom">
+                    <Weather /> 
+                  </div>
+
                 </div>
-                </JourneyWrapper>
-
-            </RightMainWrapper>
-        </GlobalWrapper>
-
-    
-
+                </JourneyWrapper> 
+    </RightMainWrapper> 
+  </GlobalWrapper>
   )
 }
 
 export default JourneyPlanner;
+
+
+
+
+{/* <div className="weather_wrapper">
+                      <div className="weather_from"></div>
+                      <div className="arrow"></div>
+                      <div className="weather_to"></div>
+                  </div> */}
+
+
+
+                   {/* <div className="input_wrapper">
+                  <div className="input">
+                      <form>
+                          <input></input>
+                          <input></input>
+                      </form>
+                  </div>
+                  <div className="results">
+                      <div className="results_img"></div>
+                  </div>
+              </div> */}
