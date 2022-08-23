@@ -1,15 +1,34 @@
-const CatCard = ({ addToBasket, cat, setCat, imgURL, img, index }) => {
-  return (
-    <div className="cat-container">
-      <button onClick={() => addToBasket(cat)}>
-        <img index={index} src={imgURL} alt="catImages"></img>
-        <div>{cat.age}</div>
-        <div>{cat.breed}</div>
-        <div>{cat.name}</div>
-        <div>£{cat.price}</div>
-      </button>
-    </div>
-  );
-};
+import {useState, useEffect} from 'react';
+import Heart from '../assets/heart.png';
+import Liked from '../assets/liked.png';
 
-export default CatCard;
+
+
+const InstaImg = ({  author, imgURL, liked, index, user }) => {
+    const [like, setLike]=useState(Heart);
+    const notLikedPic = Heart;
+    const likedPic = Liked;
+  
+    const likeHandler =(e)=>{
+              e.preventDefault(notLikedPic);
+              if(like == Heart){setLike(likedPic); };
+              if(like == Liked){setLike(notLikedPic)};
+      
+          }
+    return(
+        <div>
+            <h2>{author}</h2>
+            <img src={imgURL}/>
+            <button onClick={likeHandler}>
+            <img className='like-button' alt='heart' src={like}/>
+            <h5>{liked}</h5>
+            </button>
+        </div>
+    )
+
+
+}
+
+
+
+export default InstaImg;
