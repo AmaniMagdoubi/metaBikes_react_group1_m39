@@ -75,6 +75,11 @@ export const FooterWrapper = styled.div`
         justify-content: space-between;
     }
 
+    .twitter_icon:hover, .instagram_icon:hover, .facebook_icon:hover {
+
+        fill: white;
+    }
+
     .copyright_footer {
 
         display: flex;

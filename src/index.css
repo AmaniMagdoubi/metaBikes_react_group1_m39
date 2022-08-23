@@ -8,9 +8,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+
+  font-family: "Mokoto";
+  src: local('MokotoGlitch'), 
+    url('./font/Mokoto\ Glitch.ttf'); 
+}
+
 :root{
   --ff-main: 'Rajdhani', sans-serif;
-  --ff-title: 'Allerta Stencil', sans-serif;
+  --ff-title: 'Mokoto', sans-serif;
   --ff-three: 'Caveat', cursive;
 
   --fs-h1: 3rem;
@@ -21,7 +28,7 @@
   --clr-text-dark: #000;
   --clr-text-light: #fff;
   --clr-background: #f0f0f0ff;
-  --clr-accent: #ff9741;
+  --clr-accent: #e5741a;
   --clr-outline:#fe0707;
   --clr-btn: #d05000;
   --clr-hl: #FBEDB8;
