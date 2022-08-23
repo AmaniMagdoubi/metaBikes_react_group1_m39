@@ -4,29 +4,18 @@ import Profile from "../pages/Profile";
 import HomePage from "../pages/Home";
 import Ebike from "../pages/Ebike";
 import App from "../App";
-// import { GlobalWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
+import { Row } from "../styles/global.styles";
 
-const Router = ({ user }) => {
+const Router = ({user, themeOn}) => {
   return (
-    <nav>
-      <Link to="/" user={user}>
-        Home
-      </Link>
-      <br></br>
-      <Link to="/profile" user={user}>
-        Profile Details
-      </Link>
-      <br></br>
-      <Link to="/social" user={user}>
-        Social App
-      </Link>
-      <br></br>
-      <Link to="/ebike" user={user}>
-        E-Bike
-      </Link>
-      <br></br>
-      <h1>{user} logged in</h1>
-    </nav>
+    <Row>
+      <a onClick = {themeOn}>Themes</a>
+      <Link to="/" user={user}>Home</Link><br></br>
+      <Link to="/profile" user={user}>Profile Details</Link><br></br>
+      <Link to="/social" user={user}>Social App</Link><br></br>
+      <Link to="/ebike" user={user}>E-Bike</Link><br></br>
+      <p>{user}</p>
+    </Row>
   );
 };
 

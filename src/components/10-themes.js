@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   GNavWrapper,
   LeftSpace,
@@ -7,7 +8,7 @@ import {
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { ThemeWrapper } from "../styles/10-themes.styles";
 
-const Themes = ({ modalShow, modalOff }) => {
+const Themes = ({themeOff, themeShow}) => {
   // Change theme functions
 
   function changeText1(newColorText1) {
@@ -54,8 +55,8 @@ const Themes = ({ modalShow, modalOff }) => {
     <GNavWrapper>
       <LeftSpace></LeftSpace>
       <RightMainWrapper>
-        {modalShow ? (
-          <ThemeWrapper>
+        {themeShow ?
+        <ThemeWrapper>
             <div className="theme_modal">
               <div class="theme-text">
                 <p>Pick a theme for your account:</p>
@@ -65,7 +66,7 @@ const Themes = ({ modalShow, modalOff }) => {
                 <div
                   className="colour_drop main_theme"
                   onClick={() => {
-                    modalOff();
+                    themeOff();
                     changeText1("");
                     changeText2("");
                     changeBackground("");
@@ -82,7 +83,7 @@ const Themes = ({ modalShow, modalOff }) => {
                 <div
                   className="colour_drop blue_theme"
                   onClick={() => {
-                    modalOff();
+                    themeOff();
                     changeText1("#fff");
                     changeText2("#03045e");
                     changeBackground("#00b4d8");
@@ -99,7 +100,7 @@ const Themes = ({ modalShow, modalOff }) => {
                 <div
                   className="colour_drop pink_theme"
                   onClick={() => {
-                    modalOff();
+                    themeOff();
                     changeText1("#ff006e");
                     changeText2("#ffd166");
                     changeBackground("#b5838d");
@@ -116,7 +117,7 @@ const Themes = ({ modalShow, modalOff }) => {
                 <div
                   className="colour_drop main_theme"
                   onClick={() => {
-                    modalOff();
+                    themeOff();
                     changeText1("");
                     changeText2("");
                     changeBackground("");
@@ -133,7 +134,7 @@ const Themes = ({ modalShow, modalOff }) => {
                 <div
                   className="colour_drop main_theme"
                   onClick={() => {
-                    modalOff();
+                    themeOff();
                     changeText1("");
                     changeText2("");
                     changeBackground("");
@@ -150,7 +151,7 @@ const Themes = ({ modalShow, modalOff }) => {
                 <div
                   className="colour_drop main_theme"
                   onClick={() => {
-                    modalOff();
+                    themeOff();
                     changeText1("");
                     changeText2("");
                     changeBackground("");
@@ -171,7 +172,7 @@ const Themes = ({ modalShow, modalOff }) => {
               </div>
             </div>
           </ThemeWrapper>
-        ) : null}
+          : null}
       </RightMainWrapper>
     </GNavWrapper>
   );
