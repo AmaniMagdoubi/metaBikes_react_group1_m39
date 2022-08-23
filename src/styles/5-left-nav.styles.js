@@ -22,6 +22,10 @@ export const LeftNavWrapper = styled.div`
     .logo_wrapper{
         
         height: 10em;
+        max-width: 10px;
+        img {
+            max-width: 100px;
+        }
     }
 
     .left-nav_wrapper{
@@ -33,8 +37,12 @@ export const LeftNavWrapper = styled.div`
         margin: 10px;
     }
 
-    .logo{
+    .logo {
+
 
     }
+
+
+    
     
 `

@@ -1,9 +1,10 @@
 import React from "react";
 import {useState, } from 'react';
 import { GlobalWrapper, LeftSpace, RightMainWrapper } from "../styles/global.styles";
+import LoginLogout from "./1-login-logout";
 
 
-import SignupOrLogin from "./1-signup";
+import Signup from "./1-signup";
 import Router from "./16-router";
 
 
@@ -12,20 +13,25 @@ const Switch = () => {
   const [logged, setLogged]= useState(false)
   
   let component;
+  let component2;
   
   switch (!logged && !user){
     case !logged:
       console.log('signup');
-      component = <SignupOrLogin setter={setUser}></SignupOrLogin>;
+      component = <Signup setter={setUser}></Signup>;
+      component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     case logged && user:
       console.log('router');
       component = <Router user={user}></Router>
+      component2 = <LoginLogout setter={setUser}></LoginLogout>;
       break;
     default :
       console.log('default');
       component =
-      <SignupOrLogin setter={setUser}></SignupOrLogin>
+      <Signup setter={setUser}></Signup>;
+      component2 =
+      <LoginLogout setter={setUser}></LoginLogout>;
       break;
   }
 
@@ -37,7 +43,7 @@ const Switch = () => {
     
       {/* <SwitchWrapper> */}
       <div className="switch_wrapper" user={user}>
-        {component}
+        {component}, {component2}
       
       </div>
       {/* </SwitchWrapper> */}

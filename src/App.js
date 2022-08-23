@@ -13,7 +13,6 @@ import { GlobalWrapper } from "./styles/global.styles";
 import { LeftSpace } from "./styles/global.styles";
 import { RightMainWrapper } from "./styles/global.styles";
 
-
 const App = () => {
   const [user, setUser]= useState('')
   const [logged, setLogged]= useState(false)
