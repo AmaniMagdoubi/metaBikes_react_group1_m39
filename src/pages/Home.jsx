@@ -22,6 +22,17 @@ import LocalInterests from "../components/8-local-interests";
 
 const HomePage = () => {
 
+  // set modal button to show content on onclick
+  const [modalShow, setModalShow] = useState(false);
+  const modalOn = () => {
+    setModalShow(!modalShow);
+  };
+  // Set modal button to hide content on onclick
+  const modalOff = () => {
+    setModalShow(false);
+  };
+
+
   return (
     <div>
 
