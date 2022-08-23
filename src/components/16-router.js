@@ -9,23 +9,17 @@ import App from "../App";
 const Router = ({user}) =>{
 
 return(
-      <BrowserRouter>
-        <nav>
-          <Link to="/">Home</Link><br></br>
-          <Link to="/profile">Profile Details</Link><br></br>
-          <Link to="/social">Social App</Link><br></br>
-          <Link to="/ebike">E-Bike</Link><br></br>
+      
+        <nav >
+          <Link to="/" user={user}>Home</Link><br></br>
+          <Link to="/profile" user={user}>Profile Details</Link><br></br>
+          <Link to="/social" user={user}>Social App</Link><br></br>
+          <Link to="/ebike" user={user}>E-Bike</Link><br></br>
+          <h1>{user} logged in</h1>
         </nav>
-        <h1>{user} logged in</h1>
-        <Routes>
-          <Route  path="*" element={<HomePage user={user} />} />
-          <Route path="/profile/*" element={<Profile user={user}/>} />
-          <Route path="/ebike" element={<Ebike user={user}/>} />
-          <Route path="/social" element={<Social user={user}/>} />
-        </Routes>
-      </BrowserRouter>
-      // </RightMainWrapper>
-      // </GlobalWrapper>
+        
+
+    
     )}
 
 

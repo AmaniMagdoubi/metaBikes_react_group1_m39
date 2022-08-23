@@ -7,6 +7,14 @@
   box-sizing: border-box;
 }
 
+
+@font-face {
+
+  font-family: "Mokoto";
+  src: local('MokotoGlitch'), 
+    url('./font/Mokoto\ Glitch.ttf'); 
+}
+
 :root{
   --ff-main: 'Rajdhani', sans-serif;
   --ff-title: 'Allerta Stencil', sans-serif;
@@ -82,3 +90,7 @@ button{
   padding: 8px;
   cursor: pointer;
 }
+
+.image-box{ display: flex; border: solid; align-items: center; margin: 2px; flex-direction: column;}
+
+.like-button{max-height: 40px; max-width: auto;}

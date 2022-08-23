@@ -1,6 +1,6 @@
 exports.signUp = async(userName, eMail, passWord, setter)=>{
     try {
-        const res = await fetch('http://localhost:5001/user',{
+        const res = await fetch('https://metabikes-restapi.herokuapp.com/user',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -19,7 +19,7 @@ exports.signUp = async(userName, eMail, passWord, setter)=>{
 
 exports.login = async(userName, eMail, passWord, setter)=>{
     try {
-        const res = await fetch('http://localhost:5001/login',{
+        const res = await fetch('https://metabikes-restapi.herokuapp.com/login',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -40,7 +40,7 @@ exports.login = async(userName, eMail, passWord, setter)=>{
 
 exports.findusers = async(setter)=>{
     try {
-        const res = await fetch('http://localhost:5001/list',{
+        const res = await fetch('https://metabikes-restapi.herokuapp.com/list',{
             method: 'GET',
             headers: {'Content-Type': 'application/json'},
             
@@ -55,7 +55,7 @@ exports.findusers = async(setter)=>{
 
 exports.deleteuser = async(userName, eMail, passWord, setter)=>{
     try {
-        const res = await fetch('http://localhost:5001/delete',{
+        const res = await fetch('https://metabikes-restapi.herokuapp.com/delete',{
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -74,7 +74,7 @@ exports.deleteuser = async(userName, eMail, passWord, setter)=>{
 
 exports.updateuser = async(userName,old_password, new_userName, email, password, setter)=>{
     try {
-        const res = await fetch('http://localhost:5001/user',{
+        const res = await fetch('https://metabikes-restapi.herokuapp.com/user',{
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

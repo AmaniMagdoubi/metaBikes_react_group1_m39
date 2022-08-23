@@ -1,28 +1,12 @@
 import React from 'react'
-import {useState, useEffect} from 'react';
+import ImageFeed from '../components/20-image-feed';
+
 
 const Social = ({user}) => {
-  const [pics, setPics]= useState([]);
-  const [display, setDisplay]= useState(false);
-
-
-  const fetchPics = async()=>{
-    const res = await fetch('https://picsum.photos/v2/list');
-    const pictures = await res.json();
-    setPics(pictures);console.log(pictures);
-  } 
-  useEffect(()=>{fetchPics();console.log(pics);}, [user])
+  console.log(user);
   return (
     <div>
-    {user ? <div>
-    
-    <button onClick={(event)=>{setDisplay(!display)}}>images</button>
-    {display && pics.map((item, index)=>{
-      return (<div>
-        <h3>{item.author}</h3>
-        <img alt='pic' src={item.download_url}></img>
-      </div>)
-    })}</div> : <h1>not logged in</h1>}
+    <ImageFeed user={user}></ImageFeed>
     </div>
   )
 }
