@@ -71,7 +71,7 @@ const App = () => {
           </LoginWrapper>
             
           {modalShow ?<div className="switch_wrapper" user={user}><br></br>
-            {component}<br></br><br></br><br></br><br></br>{component2}
+           {component2}
           </div>: null}
           <Themes />
 
