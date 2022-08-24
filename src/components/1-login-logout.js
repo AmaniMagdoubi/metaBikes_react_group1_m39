@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { login } from "../utils";
 import { SignupWrapper } from "../styles/1-signup.styles";
-import {
-  GlobalWrapper,
-  LeftSpace,
-  RightMainWrapper,
-} from "../styles/global.styles.js"; //Global wrapper styles
+import {GlobalWrapper, LeftSpace, RightMainWrapper, LogoutWrapper} from "../styles/global.styles.js"; //Global wrapper styles
+import "../index.css"; //Global styles
 
 const LoginLogout = ({ setter, user }) => {
   const [username, setUsername] = useState();
@@ -35,32 +32,28 @@ const LoginLogout = ({ setter, user }) => {
           {!isLoggedin ? (
             <form onSubmit={loginHandler}>
               <label>LOGIN account details:</label>
-              <br></br>
               <input
                 onChange={(event) => setUsername(event.target.value)}
                 type="text"
                 maxLength="35"
                 placeholder="Username"
               ></input>
-              <br></br>
               <input
                 onChange={(event) => setEmail(event.target.value)}
                 type="email"
                 placeholder="Email"
               ></input>
-              <br></br>
               <input
                 onChange={(event) => setPassword(event.target.value)}
                 type="password"
                 minLength="5"
                 placeholder="Password"
               ></input>
-              <br></br>
               <button type="submit">Submit</button>
             </form>
           ) : (
             <>
-              <button onClick={logoutHandler}>Logout</button>
+            <LogoutWrapper><button clasName = "logout_switch" onClick={logoutHandler}>Logout</button></LogoutWrapper>
             </>
           )}
         </SignupWrapper>

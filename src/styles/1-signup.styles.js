@@ -3,17 +3,17 @@ import styled from "styled-components";
 export const SignupWrapper = styled.div`
     /* Button Styling */
     button {
-        border: 2px black solid;
+        /* border: 2px black solid;
         background-color: orange;
         border-radius: 0%;
-        padding: 8px 30px;
+        padding: 8px 30px; */
             
 
     }
 
     button:hover {
-        background-color: var(--clr-accent);
-        color: black;
+        /* background-color: var(--clr-accent); */
+        /* color: black; */
     }
 
     /* Form / Input Styling */

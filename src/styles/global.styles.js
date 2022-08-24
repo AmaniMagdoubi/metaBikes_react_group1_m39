@@ -11,7 +11,7 @@ export const LeftSpace = styled.div`
 
     height: auto;
     min-width: 10em !important;
-    background: black;
+    background: red; /* tester to be removed */
 
 `
 export const RightMainWrapper = styled.div`
@@ -46,4 +46,28 @@ export const GNavWrapper = styled.div`
         
     }
   
+`
+
+export const LoginWrapper = styled.div`
+
+    height: 3.3em;
+    width: 100%;
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    
+`
+
+export const LogoutWrapper = styled.div`
+
+        height: auto;
+        width: auto;
+        display: flex;
+        padding-right: 20px;
+        top: 3.5em;
+        justify-content: flex-end;
+        position: relative;
+    
 `

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 
 import UserProfile from "../components/13-user-profile";
 import Footer from "../components/9-contact-footer";
+import UserNav from "../components/3-user-nav";
 
 const Profile = ({ user }) => {
   return (

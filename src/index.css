@@ -91,6 +91,6 @@ button{
   cursor: pointer;
 }
 
-.image-box{ display: flex; border: solid; align-items: center; margin: 2px; flex-direction: column;}
+/* .image-box{ display: flex; border: solid; align-items: center; margin: 2px; flex-direction: column;}
 
-.like-button{max-height: 40px; max-width: auto;}
+.like-button{max-height: 40px; max-width: auto;} */
