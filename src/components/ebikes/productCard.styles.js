@@ -3,23 +3,25 @@ import styled from "styled-components";
 export const BodyWrapper = styled.div`
 
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   animation: fadeIn 2s;
 `
 
 export const CardWrapper = styled.div`
   height: 15em;
-  width: 70%;
+  width: 38%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   border-radius: 18px;
-  background: beige;
+  background-color: #B90E0A;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: left;
   padding: 2px;
   margin: 10px;
+  margin-left: 180px;
 
   strong{
     margin: 9px 0px;
@@ -89,7 +91,7 @@ export const Button = styled.button`
   width: 10em;
 
   :hover{
-    background: #3A7033;
+    background: black;
   }
   :active{
     background: #fff;

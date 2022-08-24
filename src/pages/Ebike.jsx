@@ -1,14 +1,19 @@
 import LeftNav from "../components/5-left-nav";
+import Footer from "../components/9-contact-footer";
 // import Basket from "../components/ebikes/Basket";
 import EbikeApp from "../components/ebikes/ebikeApp";
 // import Items from "../components/ebikes/Items";
 // import { ProductCard } from "../components/ebikes/productCard";
 
 const Ebike = () => {
-  return (
+  // const style = {
+  //   marginLeft: "200px",
+  // };
+    return (
     <div>
-        <LeftNav/>
-        <EbikeApp/>
+        <LeftNav />
+        <EbikeApp />
+        <Footer/>
         {/* <Basket/> */}
         {/* <Items/> */}
         {/* <ProductCard/> */}
