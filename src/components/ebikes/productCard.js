@@ -5,7 +5,7 @@ export const ProductCard = (props) => {
 
         <CardWrapper>
             <ImgWrapper>
-            <img src={props.url} alt={props.id}/>
+            <img src="https://monochrome-watches.com/wp-content/uploads/2022/04/William-Wood-Watches-Saltire-Motorcycles-Always-Ready-Motorbike-Custom-Indian-Scout-4.jpg" alt="ebike"/>
             </ImgWrapper>
                 <div className='card'>
                     <CardTextWrapper>

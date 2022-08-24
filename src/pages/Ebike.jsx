@@ -1,4 +1,5 @@
 import LeftNav from "../components/5-left-nav";
+import Footer from "../components/9-contact-footer";
 // import Basket from "../components/ebikes/Basket";
 import EbikeApp from "../components/ebikes/ebikeApp";
 // import Items from "../components/ebikes/Items";
@@ -6,11 +7,12 @@ import EbikeApp from "../components/ebikes/ebikeApp";
 import Footer from "../components/9-contact-footer";
 
 const Ebike = () => {
-  return (
+    return (
     <div>
-        <LeftNav/>
-        <EbikeApp/>
-        <Footer />
+        <LeftNav />
+        <EbikeApp />
+        <Footer/>
+
         {/* <Basket/> */}
         {/* <Items/> */}
         {/* <ProductCard/> */}
