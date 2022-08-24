@@ -6,6 +6,7 @@ export const BodyWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   animation: fadeIn 2s;
+  padding-bottom: 5em;
 `
 
 export const CardWrapper = styled.div`

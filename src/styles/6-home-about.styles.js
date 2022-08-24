@@ -7,6 +7,7 @@ export const HomeWrapper = styled.div`
   margin-top: 2.1em;
   display:flex;
   align-items: center;
+  padding-bottom: 5em;
     
   .home_wrapper{
 
