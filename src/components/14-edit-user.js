@@ -20,22 +20,22 @@ const UpdateUser = ({ setter }) => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <label>Username and password of user to update:</label>
+      <label>Curent Login Details:</label>
       <br></br>
       <input
         onChange={(event) => setUsername(event.target.value)}
         type="text"
         maxLength="35"
-        placeholder="Username"
+        placeholder="Current Username"
       ></input>
-      <br></br>
+      
       <input
         onChange={(event) => setPassword(event.target.value)}
         type="password"
         minLength="5"
-        placeholder="oldpassword"
+        placeholder="Current Password"
       ></input>
-      <br></br>
+      <br></br><br></br>
 
       <label>Please enter new account details:</label>
       <br></br>
@@ -43,21 +43,21 @@ const UpdateUser = ({ setter }) => {
         onChange={(event) => setNewUsername(event.target.value)}
         type="text"
         maxLength="35"
-        placeholder="Username"
+        placeholder="New Username"
       ></input>
-      <br></br>
+      
 
       <input
         onChange={(event) => setNewEmail(event.target.value)}
         type="email"
         placeholder="Email"
       ></input>
-      <br></br>
+      
       <input
         onChange={(event) => setNewPassword(event.target.value)}
         type="password"
         minLength="5"
-        placeholder="Password"
+        placeholder="New Password"
       ></input>
       <br></br>
       <button type="submit">Submit</button>

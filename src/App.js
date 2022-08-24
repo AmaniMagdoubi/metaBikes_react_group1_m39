@@ -38,22 +38,26 @@ const App = () => {
 
   let component;
   let component2;
+  let component3;
 
   switch (!logged && !user) {
     case !logged:
       console.log("signup");
-      component = <Signup setter={setUser}></Signup>;
+      // component = <Signup setter={setUser}></Signup>;
       component2 = <LoginLogout setter={setUser}></LoginLogout>;
+      component3 = <p>Login or Signup</p>;
       break;
     case logged && user:
       console.log("router");
       component = <UserNav user={user}></UserNav>;
       component2 = <LoginLogout setter={setUser}></LoginLogout>;
+      component3 = <p>{user} signed in!</p>;
       break;
     default:
       console.log("default");
-      component = <Signup setter={setUser}></Signup>;
+      // component = <Signup setter={setUser}></Signup>;
       component2 = <LoginLogout setter={setUser}></LoginLogout>;
+      component3 = <p>Login or Signup</p>;
       break;
   }
 
@@ -63,11 +67,11 @@ const App = () => {
 
 
           <LoginWrapper>
-            <p clasName = "login_switch" ><span onClick={modalOn}>Login or Signup</span></p>
+            <p clasName = "login_switch" ><span onClick={modalOn}>{component3}</span></p>
           </LoginWrapper>
             
-          {modalShow ?<div className="switch_wrapper" user={user}>
-            {component}{component2}
+          {modalShow ?<div className="switch_wrapper" user={user}><br></br>
+          {component}{component2}
           </div>: null}
           <Themes />
 

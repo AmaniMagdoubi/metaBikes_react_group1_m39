@@ -3,6 +3,7 @@ import { login } from "../utils";
 import { SignupWrapper } from "../styles/1-signup.styles";
 import {GlobalWrapper, LeftSpace, RightMainWrapper, LogoutWrapper} from "../styles/global.styles.js"; //Global wrapper styles
 import "../index.css"; //Global styles
+import { signUp } from "../utils";
 
 const LoginLogout = ({ setter, user }) => {
   const [username, setUsername] = useState();
@@ -24,13 +25,20 @@ const LoginLogout = ({ setter, user }) => {
     setter();
   };
 
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    setIsLoggedin(true);
+    await signUp(username, email, password, setter);
+  };
+
   return (
     <GlobalWrapper>
       <LeftSpace></LeftSpace>
       <RightMainWrapper>
         <SignupWrapper>
           {!isLoggedin ? (
-            <form onSubmit={loginHandler}>
+            <div>
+            <form onSubmit={loginHandler} >
               <label>LOGIN account details:</label>
               <input
                 onChange={(event) => setUsername(event.target.value)}
@@ -51,6 +59,32 @@ const LoginLogout = ({ setter, user }) => {
               ></input>
               <button type="submit">Submit</button>
             </form>
+            <div></div>
+            <form onSubmit={submitHandler}>
+            <label>Create account details:</label>
+            <br></br>
+            <input
+              onChange={(event) => setUsername(event.target.value)}
+              type="text"
+              maxLength="35"
+              placeholder="Username"
+            ></input>
+            <br></br>
+            <input
+              onChange={(event) => setEmail(event.target.value)}
+              type="email"
+              placeholder="Email"
+            ></input>
+            <br></br>
+            <input
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              minLength="5"
+              placeholder="Password"
+            ></input>
+            <br></br>
+            <button type="submit">Submit</button>
+          </form></div>
           ) : (
             <>
             <LogoutWrapper><button clasName = "logout_switch" onClick={logoutHandler}>Logout</button></LogoutWrapper>
@@ -63,3 +97,5 @@ const LoginLogout = ({ setter, user }) => {
 };
 
 export default LoginLogout;
+
+// onClick={submitHandler} 
