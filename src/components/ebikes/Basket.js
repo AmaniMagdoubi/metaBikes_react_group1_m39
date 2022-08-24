@@ -1,74 +1,71 @@
-import React, {useState} from 'react';
-import Items from './Items';
-import {BasketWrapper, ModalOff, BottomWrapper, ModalBackground, Position} from "./Basket.styles";
+import React, { useState } from "react";
+import Items from "./Items";
+import {
+  BasketWrapper,
+  ModalOff,
+  BottomWrapper,
+  ModalBackground,
+  Position,
+} from "./Basket.styles";
 
-const Basket =({ basketItems, addCat, subCat }) => {
+const Basket = ({ basketItems, addCat, subCat }) => {
+  const [modalShow, setModalShow] = useState(false);
+  const modalOn = () => {
+    setModalShow(!modalShow);
+  };
 
-    // set Basket button to show content on onclick
-    const [modalShow, setModalShow] = useState (false)
-    const modalOn = () => {
-        setModalShow(!modalShow)
-        // setModalShow(click => !click)
-        // setModalShow(true);
-    };
+  const modalOff = () => {
+    setModalShow(false);
+  };
 
-    // Set Basket button to hide content on onclick
-    const modalOff = () => {setModalShow(false)};
+  const totalPrice = basketItems.reduce(
+    (a, current) => a + current.quantity * current.price, 0);
 
-    
-
-    // Calculate the total price
-    const totalPrice = basketItems.reduce((a, current) => a + current.quantity * current.price, 0);
-
-    return (
-        
+  return (
     <div>
-        <Position>
-        <button onClick = {modalOn}>🧺</button>
-        </Position>
+      <Position>
+        <button onClick={modalOn}>🧺</button>
+      </Position>
 
-        
-
-        {modalShow ?<ModalBackground>
-            <BasketWrapper>
-       
+      {modalShow ? (
+        <ModalBackground>
+          <BasketWrapper>
             <ModalOff>
-                <button onClick = {modalOff}>X</button>
+              <button onClick={modalOff}>X</button>
             </ModalOff>
-            <h2>Your Cat Basket</h2>
-            <Items basketItems = {basketItems}
-            subCat = {subCat}
-            addCat = {addCat}/>
+            <h2>Your Basket</h2>
+            <Items basketItems={basketItems} subCat={subCat} addCat={addCat} />
 
-            {/* If Basket is empty display a message */}
             {basketItems.length === 0 && (
-            <div>
-            <p>You have no items</p>
-            </div>
+              <div>
+                <p>You have no items</p>
+              </div>
             )}
 
-            {/* If Basket length is not equal to 0 show total and checkout */}
             {basketItems.length !== 0 && (
-            <BottomWrapper>
+              <BottomWrapper>
+                <hr></hr>
+                <strong>Total Price:</strong>
+                <br />
+                <strong>£{totalPrice}</strong>
+                <hr></hr>
 
-            {/* Show total price */}
-            <hr></hr>
-            <strong>Total Price:</strong>
-            <br/>
-            <strong>£{totalPrice}</strong>
-            <hr></hr>
-
-            {/* Fake checkout */}
-            <button onClick={() => alert(`You're on the highway to sell! Thank you for using Metabikes`)}><strong>Checkout?</strong></button>
-            
-            </BottomWrapper>
+                <button
+                  onClick={() =>
+                    alert(
+                      `You're on the highway to sell! Thank you for using Metabikes`
+                    )
+                  }
+                >
+                  <strong>Checkout?</strong>
+                </button>
+              </BottomWrapper>
             )}
-
-    </BasketWrapper> 
-    </ModalBackground>:null}
-    
+          </BasketWrapper>
+        </ModalBackground>
+      ) : null}
     </div>
   );
-}
+};
 
 export default Basket;

@@ -4,16 +4,12 @@ import {
   GlobalWrapper,
   LeftSpace,
   RightMainWrapper,
-  Row,
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { JourneyWrapper } from "../styles/7-journey-planner.styles";
-//https://react-google-maps-api-docs.netlify.app/
 import Weather from "./19-weatherApp";
 
 import {
-  Box,
   Button,
-  ButtonGroup,
   HStack,
   IconButton,
   Input,
@@ -185,25 +181,3 @@ function JourneyPlanner() {
 }
 
 export default JourneyPlanner;
-
-{
-  /* <div className="weather_wrapper">
-                      <div className="weather_from"></div>
-                      <div className="arrow"></div>
-                      <div className="weather_to"></div>
-                  </div> */
-}
-
-{
-  /* <div className="input_wrapper">
-                  <div className="input">
-                      <form>
-                          <input></input>
-                          <input></input>
-                      </form>
-                  </div>
-                  <div className="results">
-                      <div className="results_img"></div>
-                  </div>
-              </div> */
-}

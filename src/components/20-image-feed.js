@@ -1,11 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
-import Heart from '../assets/heart.png';
-import Liked from '../assets/liked.png';
 import "../index.css"
-import Faker from './21-faker';
 import InstaImg from './22-insta-image';
-import CatCard from './22-insta-image';
 
 const ImageFeed = ({user, pics}) => {
   const [myPics, setMyPics] = useState([]);
