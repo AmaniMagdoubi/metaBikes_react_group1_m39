@@ -16,7 +16,7 @@ const Signup = ({ setter }) => {
     event.preventDefault();
     await signUp(username, email, password, setter);
   };
-
+// NOT IN USE
   return (
     <GlobalWrapper>
       <LeftSpace></LeftSpace>
