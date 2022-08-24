@@ -1,10 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import {
   GNavWrapper,
   LeftSpace,
   RightMainWrapper,
-  Row,
+  Row
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { ThemeWrapper } from "../styles/10-themes.styles";
 

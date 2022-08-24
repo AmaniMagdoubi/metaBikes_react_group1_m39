@@ -9,9 +9,7 @@ import Ebike from "./pages/Ebike";
 
 // import SignupOrLogin from "./components/1-signup";
 import Router from "./components/16-router";
-import { GlobalWrapper } from "./styles/global.styles";
-import { LeftSpace } from "./styles/global.styles";
-import { RightMainWrapper } from "./styles/global.styles";
+import { LoginWrapper } from "./styles/global.styles";
 import Signup from "./components/1-signup";
 import LoginLogout from "./components/1-login-logout";
 import UserNav from "./components/3-user-nav";
@@ -19,6 +17,7 @@ import UserNav from "./components/3-user-nav";
 import JP from "./pages/JourneyPlanner";
 import LI from "./pages/LocalInterest";
 import Themes from "./components/10-themes";
+import { login } from "./utils";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -62,9 +61,13 @@ const App = () => {
     <BrowserRouter>
 
 
-          <p onClick={modalOn}>Login</p>
+
+          <LoginWrapper>
+            <p clasName = "login_switch" ><span onClick={modalOn}>Login or Signup</span></p>
+          </LoginWrapper>
+            
           {modalShow ?<div className="switch_wrapper" user={user}>
-            {component}, {component2}
+            {component}{component2}
           </div>: null}
           <Themes />
 
@@ -82,3 +85,4 @@ const App = () => {
 };
 
 export default App;
+
