@@ -53,15 +53,14 @@ exports.findusers = async(setter)=>{
     }
 };
 
-exports.deleteuser = async(userName, eMail, passWord, setter)=>{
+exports.deleteuser = async(setter, username)=>{
     try {
         const res = await fetch('https://metabikes-restapi.herokuapp.com/delete',{
             method: 'DELETE',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                'username':userName,
-                'email':eMail,
-                'password':passWord
+                'username': username,
+                
             })
         });
         const data = await res.json();
