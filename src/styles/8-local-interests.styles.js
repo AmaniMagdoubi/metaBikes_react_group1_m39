@@ -11,14 +11,15 @@ export const InterestWrapper = styled.div`
     .interest_wrapper{
 
         width: 95%;
-        height: auto;
+        height: 100vh;
         margin: auto;
         padding: 15px;
         text-align: center;
         display: flex;
         flex-direction: column;
-
+        
     }
+
 
     .carousel_wrapper{
 
@@ -66,8 +67,14 @@ export const InterestWrapper = styled.div`
     }
 
     .text_wrapper{
-
+        background: var(--clr-btn);
+        color: var(--clr-text-dark);
+        border-radius: 25px;
         padding: 50px;
+
+        .sub_heading{
+            font-family: var(--ff-three);
+        }
     }
     
 `

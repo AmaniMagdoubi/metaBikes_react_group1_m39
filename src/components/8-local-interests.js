@@ -22,18 +22,13 @@ const LocalInterests = () => {
       <RightMainWrapper>
         <InterestWrapper>
           <div className="interest_wrapper">
-            <div className="carousel_wrapper">
-              <CarouselItems Component breakPoints={breakPoints}>
-                <Carousel></Carousel>
-              </CarouselItems>
-            </div>
 
             <div className="text_wrapper">
               <h1>Local Interests</h1>
-              <p>
+              <h2 className="sub_heading">
                 <em>Are you planning a journey / tour?</em> Browse our
                 e-ideas-board to sparke your creativity!
-              </p>
+              </h2>
 
               <p>
                 Mark all the towns, highways and streets you want to drive
@@ -41,7 +36,13 @@ const LocalInterests = () => {
                 your pictures! Use our Journey Planner and make your ideas come
                 to life!
               </p>
-              <p>Enjoy your travels!</p>
+              <h3 className="sub_heading">Enjoy your travels!</h3>
+            </div>
+            <br></br>
+            <div className="carousel_wrapper">
+              <CarouselItems Component breakPoints={breakPoints}>
+                <Carousel></Carousel>
+              </CarouselItems>
             </div>
           </div>
         </InterestWrapper>

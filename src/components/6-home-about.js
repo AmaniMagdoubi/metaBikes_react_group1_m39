@@ -8,7 +8,6 @@ import {
   Column,
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { HomeWrapper } from "../styles/6-home-about.styles";
-import image from "../assets/IMG002.jpg";
 
 const About = () => {
   return (
@@ -35,7 +34,8 @@ const About = () => {
               <span>
                 <img
                   src="https://picsum.photos/id/191/2000/1000"
-                  alt="random img"
+                  alt="Motor Bike" 
+                  id="welcomeImage"
                 />
               </span>
             </Column>
