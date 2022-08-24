@@ -4,7 +4,7 @@ import Footer from "../components/9-contact-footer";
 import EbikeApp from "../components/ebikes/ebikeApp";
 // import Items from "../components/ebikes/Items";
 // import { ProductCard } from "../components/ebikes/productCard";
-import Footer from "../components/9-contact-footer";
+// import Footer from "../components/9-contact-footer";
 
 const Ebike = () => {
     return (

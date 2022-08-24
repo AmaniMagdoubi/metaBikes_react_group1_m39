@@ -8,6 +8,7 @@ export const BodyWrapper = styled.div`
   align-items: center;
   animation: fadeIn 2s;
   padding-bottom: 5em;
+  /* min-width: 680px; */
 `
 
 export const CardWrapper = styled.div`
@@ -23,6 +24,8 @@ export const CardWrapper = styled.div`
   padding: 2px;
   margin: 10px;
   margin-left: 180px;
+  min-width: 600px;
+
 
   strong{
     margin: 9px 0px;
