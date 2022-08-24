@@ -10,7 +10,7 @@ export const BodyWrapper = styled.div`
 
 export const CardWrapper = styled.div`
   height: 15em;
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

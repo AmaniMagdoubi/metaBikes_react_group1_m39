@@ -4,7 +4,7 @@ import ImageFeed from "../components/20-image-feed";
 const Social = ({ user }) => {
   console.log(user);
   return (
-    <div>
+    <div className="test">
       <ImageFeed user={user}></ImageFeed>
     </div>
   );
