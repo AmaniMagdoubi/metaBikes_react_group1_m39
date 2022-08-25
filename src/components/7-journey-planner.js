@@ -85,7 +85,8 @@ function JourneyPlanner() {
         <JourneyWrapper>
           <div className="Journey_wrapper">
             <div className="text_wrapper">
-              <h1>Plan your journey</h1>
+              <h1>Journey Planner</h1>
+              <h2 className="sub_heading">Plan your journey with ease</h2>
               <p></p>
             </div>
 

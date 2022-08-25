@@ -9,6 +9,7 @@ import {
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { HomeWrapper } from "../styles/6-home-about.styles";
 
+
 const About = () => {
   return (
     <GlobalWrapper>
@@ -18,27 +19,32 @@ const About = () => {
           <div className="home_wrapper">
             <div className="title_wrapper">
               <h1>META BIKES</h1>
-              <h2>Plan a trip with your friends online and meet offline!</h2>
+              <h3>Plan a trip with your friends online and meet offline!</h3>
             </div>
+           
             <Column>
+            <Row>
               <div className="about_wrapper">
                 <h3>WELCOME TO META BIKES</h3>
-                <p>
-                  Your all-in-one platform whether you are a professional or
+                <br></br>
+                <p><p>- Your all-in-one platform whether you are a professional or
                   hobbyist biker. We're touring-friendly and here to help you
-                  every step of the way. Plan your eagerly-awaited adventure,
+                  every step of the way.</p>
+                  <br></br>
+                  <p>- Plan your eagerly-awaited adventure,
                   join our community and sell, buy and share gear on our e-Bike
-                  store!
-                </p>
+                  store!</p></p>
               </div>
+              </Row>
               <span>
                 <img
-                  src="https://picsum.photos/id/191/2000/1000"
+                  src="https://i.postimg.cc/XYLXNCfL/honda-red-bike.jpg"
                   alt="Motor Bike" 
                   id="welcomeImage"
                 />
               </span>
             </Column>
+
             <Row>
               <div class="productSection_wrapper">
                 <div class="productSection">
@@ -126,6 +132,7 @@ const About = () => {
                 </div>
               </div>
             </Row>
+            
             <div className=""></div>
           </div>
         </HomeWrapper>

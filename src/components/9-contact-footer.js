@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="footer_wrapper">
             <div className="footer_text">
               <div className="header_text">
-                <h1>META BIKES</h1>
+                <h2>META BIKES</h2>
               </div>
 
               <Column className="right_text">

@@ -1,18 +1,22 @@
 import styled from "styled-components";
 
 export const Position = styled.div`
-  button {
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    border-color: rgb(0, 0, 0);
-    border-style: double;
-    height: 50px;
-    width: 120px;
-    font-size: 20px;
-    margin: 9px;
-  }
-`;
+
+    button{
+        background-color: var(--clr-btn);
+        border: solid 5px white;
+        height: 50px;
+        width: 120px;
+        font-size: 20px;
+        margin: 9px;
+    }
+
+    button:hover {
+        background-color: white;
+        border: solid 5px var(--clr-btn);
+    }
+
+`
 
 export const ModalBackground = styled.div`
   position: fixed;
@@ -37,7 +41,7 @@ export const BasketWrapper = styled.div`
   z-index: 1;
 
   h2 {
-    font: small-caps bold 30px Georgia, serif;
+    font-family: var( --ff-title);
     color: #46863d;
     margin: 0 0 15px 0;
     text-align: center;
@@ -50,15 +54,45 @@ export const BasketWrapper = styled.div`
     background: #46863d;
   }
 
-  button:hover {
-    background: #3a7033;
-  }
 
-  button:active {
-    background: #000;
+    height: auto;
+    width: 25em;
     color: #fff;
-  }
-`;
+    border: solid 3px white;
+    border-radius: 10px;
+    background: var(--clr-btn);
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    
+    
+
+
+    h2{
+        font-family: var(--ff-main);
+        color: white;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+
+    button{
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background: #fff;
+    }
+
+    button:hover{
+        background: grey;
+    }
+    button:active{
+        background: #000;
+        color:#fff;
+    }
+
+
+`
+
 
 export const ModalOff = styled.div`
   height: auto;
@@ -70,6 +104,11 @@ export const ModalOff = styled.div`
   button {
     height: 30px;
     width: 60px;
+  }
+
+  button:active {
+    background: #000;
+    color: #fff;
   }
 `;
 
@@ -125,7 +164,12 @@ export const BottomWrapper = styled.div`
   text-align: center;
   font: small-caps bold 15px Georgia, serif;
 
+
+text-align: center;
+font-family: var(--ff-main);
+
   button {
+
     margin: 30px auto 0 auto;
     height: 30px;
     width: 75%;
