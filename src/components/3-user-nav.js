@@ -14,32 +14,28 @@ const UserNav = ({ user }) => {
   const themeOff = () => {
     setThemeShow(false);
   };
-
+  
   return (
     <GNavWrapper>
-      <UserWrapper>
+        <UserWrapper>
         <div className="user_wrapper">
-          <Row>
-            <div className="user_links">
-              <Router themeOn={themeOn} />
-              <Themes
-                themeOff={themeOff}
-                themeShow={themeShow}
-                themeOn={themeOn}
-              />
-            </div>
+                <Row>
+                    <div className="user_links">
+                        <Router themeOn ={themeOn}/>
+                        <div className="position_themes"><Themes themeOff = {themeOff} themeShow = {themeShow} themeOn = {themeOn} /></div>
+                    </div>
 
-            <div class="header-verline"></div>
+                    <div class="header-verline"></div>
 
-            <div className="user_display">
-              <span>{user}</span>
-              <div className="user_img">
-                <img src="https://random.imagecdn.app/900/900" alt="random" />
-              </div>
+                    <div className="user_display">
+                      <span>{user}</span>
+                      <div className="user_img"><img src="https://random.imagecdn.app/900/900" alt="random"/></div>
+                    </div>
+                    
+
+                </Row>
             </div>
-          </Row>
-        </div>
-      </UserWrapper>
+        </UserWrapper>
     </GNavWrapper>
   );
 };

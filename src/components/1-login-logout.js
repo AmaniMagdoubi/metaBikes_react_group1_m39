@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { login } from "../utils";
 import { SignupWrapper } from "../styles/1-signup.styles";
-import {GlobalWrapper, LeftSpace, RightMainWrapper, LogoutWrapper} from "../styles/global.styles.js"; //Global wrapper styles
+import {LogoutWrapper} from "../styles/global.styles.js"; //Global wrapper styles
 import "../index.css"; //Global styles
 import { signUp } from "../utils";
 
-const LoginLogout = ({ setter, user }) => {
+const LoginLogout = ({ setter, user, signupShow, signupOn, loginShow, signupOff, loginOn}) => {
   const [username, setUsername] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -32,70 +32,80 @@ const LoginLogout = ({ setter, user }) => {
   };
 
   return (
-    <GlobalWrapper>
-      <LeftSpace></LeftSpace>
-      <RightMainWrapper>
         <SignupWrapper>
           {!isLoggedin ? (
-            <div>
-            <form onSubmit={loginHandler} >
-              <label>LOGIN account details:</label>
-              <input
-                onChange={(event) => setUsername(event.target.value)}
-                type="text"
-                maxLength="35"
-                placeholder="Username"
-              ></input>
-              <input
-                onChange={(event) => setEmail(event.target.value)}
-                type="email"
-                placeholder="Email"
-              ></input>
-              <input
-                onChange={(event) => setPassword(event.target.value)}
-                type="password"
-                minLength="5"
-                placeholder="Password"
-              ></input>
-              <button type="submit">Submit</button>
-            </form>
-            <div></div>
-            <form onSubmit={submitHandler}>
-            <label>Create account details:</label>
-            <br></br>
-            <input
-              onChange={(event) => setUsername(event.target.value)}
-              type="text"
-              maxLength="35"
-              placeholder="Username"
-            ></input>
-            <br></br>
-            <input
-              onChange={(event) => setEmail(event.target.value)}
-              type="email"
-              placeholder="Email"
-            ></input>
-            <br></br>
-            <input
-              onChange={(event) => setPassword(event.target.value)}
-              type="password"
-              minLength="5"
-              placeholder="Password"
-            ></input>
-            <br></br>
-            <button type="submit">Submit</button>
-          </form></div>
+            <div className="form_wrappers">
+
+                      {loginShow ?<div className="form bg">
+                      
+                        <div className="full_wrapper"><p>login or signup to META BIKES <br></br>to gain access to <br></br><span>our colour themes and social app!</span></p></div>
+
+                        <div className="full_wrapper">
+                        <button className="modal_off"onClick={loginOn}>X</button>
+                        <form onSubmit={loginHandler} >
+                          <h2>LOGIN</h2>
+                          <input
+                            onChange={(event) => setUsername(event.target.value)}
+                            type="text"
+                            maxLength="35"
+                            placeholder="Username"
+                          ></input>
+                          <input
+                            onChange={(event) => setEmail(event.target.value)}
+                            type="email"
+                            placeholder="Email"
+                          ></input>
+                          <input
+                            onChange={(event) => setPassword(event.target.value)}
+                            type="password"
+                            minLength="5"
+                            placeholder="Password"
+                          ></input>
+                          <button type="submit">Submit</button>
+                        </form>
+                        </div>
+                        <div className="full_wrapper"><p> Don't have an account?<a onClick={signupOn}><br></br>Signup</a></p></div>
+                        </div>: null}
+
+                        {signupShow ?<div className="form">
+
+                        <div className="full_wrapper"><p>login or signup to META BIKES <br></br>to gain access to <br></br><span>our colour themes and social app!</span></p></div>
+
+                        <div className="full_wrapper"> 
+                        <button className="modal_off" onClick={() => {loginOn(); signupOff('');}}>X</button>
+                          <form onSubmit={submitHandler}>
+                          <h2>Signup</h2>
+                          <input
+                            onChange={(event) => setUsername(event.target.value)}
+                            type="text"
+                            maxLength="35"
+                            placeholder="Username"
+                          ></input>
+                          <input
+                            onChange={(event) => setEmail(event.target.value)}
+                            type="email"
+                            placeholder="Email"
+                          ></input>
+                          <input
+                            onChange={(event) => setPassword(event.target.value)}
+                            type="password"
+                            minLength="5"
+                            placeholder="Password"
+                          ></input>
+                          <button type="submit">Submit</button>
+                        </form>
+                        </div> 
+
+                        <div className="full_wrapper"><p>Have an account?<a onClick={signupOff}><br></br>Login</a></p></div>
+                        </div>: null}
+          </div>
           ) : (
             <>
             <LogoutWrapper><button clasName = "logout_switch" onClick={logoutHandler}>Logout</button></LogoutWrapper>
             </>
           )}
         </SignupWrapper>
-      </RightMainWrapper>
-    </GlobalWrapper>
   );
 };
 
 export default LoginLogout;
-
-// onClick={submitHandler} 

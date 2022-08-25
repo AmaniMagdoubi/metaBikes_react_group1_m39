@@ -10,7 +10,7 @@ const LeftNav = ({ user }) => {
       <LeftNavWrapper>
         <div className="logo_wrapper">
           <div className="logo">
-            <img src={Image} alt="Meta Bikes Logo" />
+            <Link to="/" user={user}><img src={Image} alt="Meta Bikes Logo" /></Link>
           </div>
         </div>
         <div className="left-nav_wrapper">
