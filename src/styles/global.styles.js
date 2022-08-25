@@ -41,10 +41,6 @@ export const GNavWrapper = styled.div`
     height: auto;
     width: 100%;
     z-index: 1;
-
-    a{
-        
-    }
   
 `
 

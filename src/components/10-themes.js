@@ -18,11 +18,11 @@ const Themes = ({themeOff, themeShow}) => {
   function changeHL(newColorHL) {
     document.documentElement.style.setProperty("--clr-hl", newColorHL);
   }
-  function changeHeading(newHeading) {
-    document.documentElement.style.setProperty("--ff-title", newHeading);
-  }
   function changeLink(newLink) {
     document.documentElement.style.setProperty("--ff-three", newLink);
+  }
+  function changeBody(newBody) {
+    document.documentElement.style.setProperty("--ff-main", newBody);
   }
   function changeText1(newColorText1) {document.documentElement.style.setProperty( "--clr-text-dark",newColorText1);
   }
@@ -57,7 +57,7 @@ const Themes = ({themeOff, themeShow}) => {
         document.getElementById("welcomeImage").src = imageHomeFive; 
         break;
       // 6 "Yellow" Scrambler Ducati 
-      case "#ffb331":
+      case "#edc531":
         document.getElementById("welcomeImage").src = imageHomeSix; 
         break;
       default:
@@ -80,22 +80,22 @@ const Themes = ({themeOff, themeShow}) => {
               <div className="colour_links">
                 
                           {/* Main Theme 1 found in index.css */}
-                          <div className="colour_drop main_theme" onClick={() => {themeOff(); changeText1(''); changeText2('');changeBackground(''); changeAccent(''); changeOutline(''); changeBtn(''); changeHL(''); changeHeading(''); changeLink('');}}></div>
+                          <div className="colour_drop main_theme" onClick={() => {themeOff(); changeText1(''); changeText2('');changeBackground(''); changeAccent(''); changeOutline(''); changeBtn(''); changeHL(''); changeLink(''); changeBody('');}}></div>
                            
                            {/* Theme 2 - "Blue" Yamaha */}
-                           <div className="colour_drop blue_theme" onClick={() => {themeOff(); changeText1('#fff'); changeText2('#0a2d81');changeBackground('#518c9c'); changeAccent('#0099c1'); changeOutline('#0a2d81'); changeBtn('#7209b7'); changeHL('#caf0f8'); changeHeading(''); changeLink('');}}></div>
+                           <div className="colour_drop blue_theme" onClick={() => {themeOff(); changeText1('#fff'); changeText2('#0a2d81');changeBackground('#518c9c'); changeAccent('#0099c1'); changeOutline('#0a2d81'); changeBtn('#7209b7'); changeHL('#caf0f8'); changeLink(''); changeBody('');}}></div>
                            
                            {/* Theme 3 - "Neon Green" Kawasaki */}
-                           <div className="colour_drop green_theme" onClick={() => {themeOff(); changeText1('#fff'); changeText2('#1e5c45');changeBackground('#69be28'); changeAccent('#1e5c45'); changeOutline('#1e5c45'); changeBtn('#1e5c45'); changeHL('#32cd33'); changeHeading(''); changeLink('');}}></div>
+                           <div className="colour_drop green_theme" onClick={() => {themeOff(); changeText1('#fff'); changeText2('#1e5c45');changeBackground('#69be28'); changeAccent('#1e5c45'); changeOutline('#1e5c45'); changeBtn('#1e5c45'); changeHL('#32cd33'); changeLink(''); changeBody('');}}></div>
                               
                            {/* Theme 4 - "Red" Honda */}
-                           <div className="colour_drop red_theme" onClick={() => {themeOff(); changeText1(''); changeText2('');changeBackground('#fff'); changeAccent('#DC182D'); changeOutline('#979797'); changeBtn('#DC182D'); changeHL('#979797'); changeHeading(''); changeLink('');}}></div>
+                           <div className="colour_drop red_theme" onClick={() => {themeOff(); changeText1(''); changeText2('');changeBackground('#fff'); changeAccent('#DC182D'); changeOutline('#979797'); changeBtn('#DC182D'); changeHL('#979797'); changeLink('DynaPuff'); changeBody('Rajdhani');}}></div>
                               
                            {/* Theme 5 - "Grey" Norton */}
-                           <div className="colour_drop grey_theme" onClick={() => {themeOff(); changeText1(''); changeText2('#fff');changeBackground('#000'); changeAccent('#9da8a9'); changeOutline('#5a5a5d'); changeBtn('#abb8c3'); changeHL('#2e3c41'); changeHeading(''); changeLink('');}}></div>
+                           <div className="colour_drop grey_theme" onClick={() => {themeOff(); changeText1(''); changeText2('#fff');changeBackground('#000'); changeAccent('#9da8a9'); changeOutline('#5a5a5d'); changeBtn('#abb8c3'); changeHL('#2e3c41'); changeLink(''); changeBody('');}}></div>
                            
                            {/* Theme 6 - "Yellow" Scrambler Ducati */}
-                           <div className="colour_drop yellow_theme" onClick={() => {themeOff(); changeText1(''); changeText2('');changeBackground('#fff'); changeAccent('#ffac2a'); changeOutline('#666666'); changeBtn('#ffb331'); changeHL(''); changeHeading(''); changeLink('');}}></div>
+                           <div className="colour_drop yellow_theme" onClick={() => {themeOff(); changeText1('#03071e'); changeText2('#e9eaec');changeBackground('#fff'); changeAccent('#ffac2a'); changeOutline('#fffe3a'); changeBtn('#edc531'); changeHL('#ffe8cc'); changeLink('Rajdhani'); changeBody('DynaPuff');}}></div>
 
             </div>
             </div>

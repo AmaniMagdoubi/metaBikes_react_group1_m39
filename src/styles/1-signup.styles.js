@@ -47,7 +47,7 @@ export const SignupWrapper = styled.div`
         padding: 20px;
         border: solid 2px black;
         span{animation: milUsers 10s infinite;}
-        a{font-size: var(--fs-h2); color: var(--clr-btn);}
+        a{ color: var(--clr-btn);}
         
     }
 

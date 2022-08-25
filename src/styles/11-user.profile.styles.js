@@ -3,27 +3,11 @@ import styled from "styled-components";
 export const UserProfileWrapper = styled.div`
 
     body {
-        display: flex
+        display: flex;
         justify-content: center;
         align-content: center;
         align-items: center;
     }
-
-    /* Button Styling */
-    button {
-        /* border: 2px black solid;
-        background-color: orange;
-        border-radius: 0%;
-        padding: 8px 30px; */
-            
-
-    }
-
-    button:hover {
-        /* background-color: var(--clr-accent); */
-        /* color: black; */
-    }
-
     /* Form / Input Styling */
     input {
         background-color: white;

@@ -34,6 +34,7 @@ export const HomeWrapper = styled.div`
     padding: 8em 0px 5em;
     background: var(--clr-accent);
     border-radius: 25px 0px 25px 0px;
+    h3{padding: 5px 50px;}
     
   }
 
