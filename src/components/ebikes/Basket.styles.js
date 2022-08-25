@@ -41,7 +41,7 @@ export const BasketWrapper = styled.div`
   z-index: 1;
 
   h2 {
-    font: small-caps bold 30px Georgia, serif;
+    font-family: var( --ff-title);
     color: #46863d;
     margin: 0 0 15px 0;
     text-align: center;
@@ -93,13 +93,6 @@ export const BasketWrapper = styled.div`
 
 `
 
-export const ModalOff = styled.div`
-
-  button:active {
-    background: #000;
-    color: #fff;
-  }
-`;
 
 export const ModalOff = styled.div`
   height: auto;
@@ -111,6 +104,11 @@ export const ModalOff = styled.div`
   button {
     height: 30px;
     width: 60px;
+  }
+
+  button:active {
+    background: #000;
+    color: #fff;
   }
 `;
 
