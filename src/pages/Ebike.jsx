@@ -1,6 +1,7 @@
 import LeftNav from "../components/5-left-nav";
 import Footer from "../components/9-contact-footer";
 import EbikeApp from "../components/ebikes/ebikeApp";
+
 import {
   GlobalWrapper,
   LeftSpace,

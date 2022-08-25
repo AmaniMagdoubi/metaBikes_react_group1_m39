@@ -23,7 +23,7 @@ const LeftNav = ({ user }) => {
                 Journey Planner
               </Link>
               <Link to="/ebike" user={user}>
-                MetaBikes Shop
+                E-Bike Shop
               </Link>
               <Link to="/localinterests" user={user}>
                 Local Interests
