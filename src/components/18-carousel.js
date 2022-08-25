@@ -78,12 +78,12 @@ class CarouselItems extends Component {
       >
         {items.map((item) => (
           <CarouselImg key={item.id}>
-            <img src={item.url} />
+            <img src={item.url} alt="carousel" />
           </CarouselImg>
         ))}
       </Carousel>
     );
   }
-}
+};
 
 export default CarouselItems;

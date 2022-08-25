@@ -9,5 +9,5 @@ const Social = ({ user }) => {
     </div>
   );
 };
-
+  
 export default Social;

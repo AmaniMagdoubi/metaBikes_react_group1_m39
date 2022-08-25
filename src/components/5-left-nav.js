@@ -19,7 +19,6 @@ const LeftNav = ({ user }) => {
               <Link to="/" user={user}>
                 Home
               </Link>
-
               <Link to="/journeyplanner" user={user}>
                 Journey Planner
               </Link>

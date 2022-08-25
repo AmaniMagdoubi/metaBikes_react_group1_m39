@@ -1,50 +1,44 @@
 import { useState, useEffect } from "react";
-import * as faker from "faker"
+import * as faker from "faker";
 
 export const useCatAPI = () => {
-    const [ results, setResults ] = useState([]);
+  const [results, setResults] = useState([]);
 
-    const fetchData = async () => {
-        const endpoint = "https://api.thecatapi.com/v1/images/search?limit=10";
+  const fetchData = async () => {
+    const endpoint = "https://api.thecatapi.com/v1/images/search?limit=10";
 
-        const handleResults = data => {
-            const parsedResults = (data || []).map((results) => {
-                // const name = `${faker.name.firstName()} '${faker.lorem.word()}' ${faker.name.lastName()}`;
-                const model = faker.finance.account();
-                const vehicle = faker.vehicle.vehicle();
-                const vin = faker.vehicle.vin();
-                const job = faker.name.jobType();
-                const description = faker.commerce.productDescription();
-                const price = faker.commerce.price();
-                return {
-                    id: results.id,
-                    url: results.url,
-                    vin,
-                    model,
-                    vehicle,
-                    job,
-                    description,
-                    price,
-                }
-            })
-            setResults([
-                ...parsedResults,
-            ]);
+    const handleResults = (data) => {
+      const parsedResults = (data || []).map((results) => {
+        const vehicle = faker.vehicle.vehicle();
+        const vin = faker.vehicle.vin();
+        const job = faker.name.jobType();
+        const description = faker.commerce.productDescription();
+        const price = faker.commerce.price();
+        return {
+          vin,
+          vehicle,
+          job,
+          description,
+          price,
         };
+      });
 
-        const handleError = error => {
-            alert(`error: ${error}`);
-        };
+      setResults([...parsedResults]);
+    };
 
-        fetch(endpoint)
-            .then(response => response.clone().json())
-            .then(handleResults)
-            .catch(handleError);    
-    }
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => { fetchData(); }, []);
+    const handleError = (error) => {
+      alert(`error: ${error}`);
+    };
 
-    return [...results];
+    fetch(endpoint)
+      .then((response) => response.clone().json())
+      .then(handleResults)
+      .catch(handleError);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return [...results];
 };
- 

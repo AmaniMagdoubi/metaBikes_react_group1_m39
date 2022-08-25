@@ -5,8 +5,8 @@ import Footer from "../components/9-contact-footer";
 const JP = () => {
   return (
     <div>
-      <LeftNav></LeftNav>
-      <JourneyPlanner></JourneyPlanner>
+      <LeftNav />
+      <JourneyPlanner />
       <Footer />
     </div>
   );

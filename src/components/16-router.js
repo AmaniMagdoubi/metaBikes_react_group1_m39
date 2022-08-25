@@ -1,9 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import Social from "../pages/Social";
-import Profile from "../pages/Profile";
-import HomePage from "../pages/Home";
-import Ebike from "../pages/Ebike";
-import App from "../App";
+import { Link } from "react-router-dom";
 import { Row } from "../styles/global.styles";
 
 const Router = ({user, themeOn}) => {

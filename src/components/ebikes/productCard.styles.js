@@ -23,6 +23,8 @@ export const CardWrapper = styled.div`
   padding: 2px;
   margin: 10px;
   margin-left: 180px;
+  min-width: 600px;
+
 
   strong{
     margin: 9px 0px;
@@ -46,7 +48,6 @@ export const CardWrapper = styled.div`
     max-width: 30em;
     text-align: center;
    
-
     button{
       margin: 7px 0px 20px;
     }
@@ -69,9 +70,8 @@ img{
   display: flex;
   justify-content: center;
 }
+`;
 
-
-`
 export const CardTextWrapper = styled.div`
 display: flex;
 flex-direction: column;  
@@ -79,8 +79,6 @@ margin: 25px 25px 7px 25px;
 `;
 
 export const Button = styled.button`
-
-
   color: white;
   border: none;
   background: black;
@@ -99,5 +97,4 @@ export const Button = styled.button`
     background: #fff;
     color: black;
 }
-  
-`
+`;
