@@ -68,5 +68,11 @@ export const UserWrapper = styled.div`
           }
     }
 
+    .position_themes{
+        position: absolute;
+        left: -5em;
+        top: 0em;
+    }
+
     
 `

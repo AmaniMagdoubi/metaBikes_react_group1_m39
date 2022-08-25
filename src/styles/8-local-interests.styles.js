@@ -3,15 +3,15 @@ import "../index.css";
 
 export const InterestWrapper = styled.div`
 
-    height: 100%;
-    margin-top: 2.1em;
+    height: 100vh;
+    margin-top: 0px;
     display:flex;
     align-items: center;
 
     .interest_wrapper{
 
         width: 95%;
-        height: 100vh;
+        height: auto;
         margin: auto;
         padding: 15px;
         text-align: center;

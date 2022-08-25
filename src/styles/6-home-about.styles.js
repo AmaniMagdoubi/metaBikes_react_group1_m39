@@ -22,7 +22,7 @@ export const HomeWrapper = styled.div`
 
     span img{
       margin: auto;
-      width: 100%;
+      max-width: 100%;
       border-radius: 20px;
     }
     
@@ -32,23 +32,25 @@ export const HomeWrapper = styled.div`
     height: auto;
     width: auto;
     padding: 8em 0px 5em;
-    background: var(--clr-btn);
-    border-radius: 25px 0px 25px;
+    background: var(--clr-accent);
+    border-radius: 25px 0px 25px 0px;
     
   }
 
   .about_wrapper{
 
     background: var(--clr-text-light);
-    padding: 1em 30px 5em;
+    padding: 3em 30px;
     border-radius: 0px  0px  25px 25px;
-    /* background-image: url("https://postimg.cc/SYWYzmV8"); */
-    background-size: cover;
-    width: 50%;
+    max-width: 30em;
     text-align:left;
     position: absolute;
     opacity: 0.7;
+    height: auto;
+
+    h3{text-align:center;}
   }
+  .text2{top: 63%; border-radius: 25px;}
 
   .productSection_wrapper{
     

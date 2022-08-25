@@ -57,6 +57,8 @@ export const LoginWrapper = styled.div`
     align-items: center;
     justify-content: flex-end;
     position: absolute;
+    cursor: pointer;
+    p:hover{color: var(--clr-btn);}
     
 `
 
@@ -66,8 +68,11 @@ export const LogoutWrapper = styled.div`
         width: auto;
         display: flex;
         padding-right: 20px;
-        top: 3.5em;
+        top: 4.8em;
         justify-content: flex-end;
-        position: relative;
+        position: absolute;
+        right: 1em;
+        button{padding: 5px 10px; border-radius: 25px 0px 25px;}
+        button:hover{background: var(--clr-outline); color: var(--clr-text-light); border-radius: 0px 25px 0px;}
     
 `
