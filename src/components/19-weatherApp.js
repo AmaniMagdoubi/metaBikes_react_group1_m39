@@ -1,10 +1,4 @@
 import React, { useState } from "react";
-import {
-  GlobalWrapper,
-  LeftSpace,
-  RightMainWrapper,
-  Row,
-} from "../styles/global.styles.js"; //Global wrapper styles
 import { WeatherApp } from "../styles/7-journey-planner.styles";
 import axios from "axios";
 

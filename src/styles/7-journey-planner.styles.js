@@ -22,6 +22,10 @@ export const JourneyWrapper = styled.div`
 
         .text_wrapper{
           padding: 10px;
+
+          .sub_heading {
+            font-family: var(--ff-three);
+          }
         }
     }
 

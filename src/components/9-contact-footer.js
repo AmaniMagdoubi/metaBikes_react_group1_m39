@@ -3,7 +3,6 @@ import {
   GlobalWrapper,
   LeftSpace,
   RightMainWrapper,
-  Row,
   Column,
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { FooterWrapper } from "../styles/9-contact-footer.styles";

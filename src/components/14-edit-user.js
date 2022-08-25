@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { updateuser } from "../utils";
-
+  
 const UpdateUser = ({ setter }) => {
   const [username, setUsername] = useState();
   const [old_password, setPassword] = useState();
