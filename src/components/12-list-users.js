@@ -1,4 +1,5 @@
-import { findusers } from "../utils";
+import React from "react";
+import findusers from "../utils/find";
 
 const ListUsers = ({ setter }) => {
   const clickHandler = async (event) => {

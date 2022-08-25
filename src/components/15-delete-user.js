@@ -1,5 +1,5 @@
-// import { useState } from "react";
-import { deleteuser } from "../utils";
+import React from "react";
+import deleteuser from "../utils/delete";
 
 const DeleteUser = ({ setter, user }) => {
   // const [username, setUsername] = useState();

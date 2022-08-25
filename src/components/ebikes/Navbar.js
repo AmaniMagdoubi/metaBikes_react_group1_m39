@@ -1,3 +1,4 @@
+import React from "react";
 import Basket from './Basket'
 import {StyleNavbar, NavWrapper} from './Navbar.styles';
 

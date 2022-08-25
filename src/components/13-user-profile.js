@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import ListUsers from "./12-list-users";
 import DeleteUser from "./15-delete-user";
@@ -6,7 +7,9 @@ import { UserProfileWrapper } from "../styles/11-user.profile.styles";
 
 const UserProfile = ({setter, user }) => {
   const [allUsers, setUsers] = useState([""]);
+  // eslint-disable-next-line
   const [del, setDel] = useState();
+  // eslint-disable-next-line
   const [upd, setUpd] = useState();
  
   return (

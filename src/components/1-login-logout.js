@@ -1,9 +1,10 @@
+import React from "react";
 import { useState } from "react";
-import { login } from "../utils";
+import login from "../utils/log";
 import { SignupWrapper } from "../styles/1-signup.styles";
 import {LogoutWrapper} from "../styles/global.styles.js"; //Global wrapper styles
 import "../index.css"; //Global styles
-import { signUp } from "../utils";
+import signUp from "../utils/sign";
 
 const LoginLogout = ({ setter, user, signupShow, signupOn, loginShow, signupOff, loginOn}) => {
   const [username, setUsername] = useState();

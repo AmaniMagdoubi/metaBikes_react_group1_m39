@@ -42,8 +42,8 @@ const Footer = () => {
                       {/* Facebook Icon SVG */}
                       <a
                         href="https://en-gb.facebook.com/"
-                        target="_blank"
-                        rel="noreferrer"
+                        target="_blank" 
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Footer = () => {
                       <a
                         href="https://www.instagram.com/"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ const Footer = () => {
                       <a
                         href="https://twitter.com/?lang=en-GB"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
