@@ -6,7 +6,9 @@ import UpdateUser from "./14-edit-user";
 
 const UserProfile = ({setter, user }) => {
   const [allUsers, setUsers] = useState([""]);
+  // eslint-disable-next-line
   const [del, setDel] = useState();
+  // eslint-disable-next-line
   const [upd, setUpd] = useState();
   
  

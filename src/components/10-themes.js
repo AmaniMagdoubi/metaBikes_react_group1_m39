@@ -3,7 +3,6 @@ import {
   GNavWrapper,
   LeftSpace,
   RightMainWrapper,
-  Row
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { ThemeWrapper } from "../styles/10-themes.styles";
 import imageHomeTwo from '../assets/yamaha-blue-bike.jpeg'; 
