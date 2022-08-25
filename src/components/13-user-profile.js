@@ -3,7 +3,7 @@ import { useState } from "react";
 import ListUsers from "./12-list-users";
 import DeleteUser from "./15-delete-user";
 import UpdateUser from "./14-edit-user";
-import { UserProfileWrapper } from "../styles/11-user.profile.styles";
+import { UserProfileWrapper, ListWrapper } from "../styles/11-user.profile.styles";
 
 const UserProfile = ({setter, user }) => {
   const [allUsers, setUsers] = useState([""]);
@@ -15,17 +15,16 @@ const UserProfile = ({setter, user }) => {
   return (
     <UserProfileWrapper>
       {user ? (
-        <div>
+        <div className="profile_wrapper">
           <h1>{user} logged in</h1>
-          
-          <DeleteUser setter={setDel} user={user}></DeleteUser>
-          <UpdateUser setter={setUpd}></UpdateUser><br></br><br></br>
+          <UpdateUser setDel={setDel} user={user} setter={setUpd}></UpdateUser>
           <ListUsers setter={setUsers} />{" "}
-          {allUsers.map((allUsers) => (
-            <ul>
+          <ListWrapper>{allUsers.map((allUsers) => (
+            <ul className="list_wrapper">
               <h2>{allUsers}</h2>
             </ul>
           ))}
+          </ListWrapper>
         </div>
       ) : (
         <p style={{textAlign: "center", fontSize: "50px"}}>No User !<br></br> Login To View</p>

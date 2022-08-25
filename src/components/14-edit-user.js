@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import updateuser from "../utils/update";
+import { Wrapper } from "../styles/11-user.profile.styles";
+import DeleteUser from "./15-delete-user";
   
-const UpdateUser = ({ setter }) => {
+const UpdateUser = ({ setter, setDel, user }) => {
   const [username, setUsername] = useState();
   const [old_password, setPassword] = useState();
   const [new_username, setNewUsername] = useState();
@@ -19,7 +21,8 @@ const UpdateUser = ({ setter }) => {
       setter
     );
   };
-  return (
+  return (<Wrapper>
+    
     <form onSubmit={submitHandler}>
       <label>Curent Login Details:</label>
       <br></br>
@@ -36,7 +39,7 @@ const UpdateUser = ({ setter }) => {
         minLength="5"
         placeholder="Current Password"
       ></input>
-      <br></br><br></br>
+      <DeleteUser setter={setDel} user={user}></DeleteUser>
 
       <label>Please enter new account details:</label>
       <br></br>
@@ -62,7 +65,7 @@ const UpdateUser = ({ setter }) => {
       ></input>
       <br></br>
       <button type="submit">Submit</button>
-    </form>
+    </form></Wrapper>
   );
 };
 
