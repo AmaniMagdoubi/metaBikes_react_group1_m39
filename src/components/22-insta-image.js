@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Heart from "../assets/heart.png";
 import Liked from "../assets/liked.png";

@@ -1,5 +1,6 @@
+import React from "react";
 import { useState } from "react";
-import { updateuser } from "../utils/update";
+import updateuser from "../utils/update";
   
 const UpdateUser = ({ setter }) => {
   const [username, setUsername] = useState();
