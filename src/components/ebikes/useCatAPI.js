@@ -20,6 +20,7 @@ export const useCatAPI = () => {
           job,
           description,
           price,
+          id: results.id,
         };
       });
 
