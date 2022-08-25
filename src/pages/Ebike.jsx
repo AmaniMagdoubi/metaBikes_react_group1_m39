@@ -1,5 +1,4 @@
 import LeftNav from "../components/5-left-nav";
-import Footer from "../components/9-contact-footer";
 // import Basket from "../components/ebikes/Basket";
 import EbikeApp from "../components/ebikes/ebikeApp";
 // import Items from "../components/ebikes/Items";

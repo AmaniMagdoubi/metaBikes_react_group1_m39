@@ -2,16 +2,15 @@ import { useState, useEffect } from "react";
 import ListUsers from "./12-list-users";
 import DeleteUser from "./15-delete-user";
 import UpdateUser from "./14-edit-user";
-import { render } from "@testing-library/react";
+import { UserProfileWrapper } from "../styles/11-user.profile.styles";
 
 const UserProfile = ({setter, user }) => {
   const [allUsers, setUsers] = useState([""]);
   const [del, setDel] = useState();
   const [upd, setUpd] = useState();
-  
  
   return (
-    <div>
+    <UserProfileWrapper>
       {user ? (
         <div>
           <h1>{user} logged in</h1>
@@ -28,7 +27,7 @@ const UserProfile = ({setter, user }) => {
       ) : (
         <p style={{textAlign: "center", fontSize: "50px"}}>No User !<br></br> Login To View</p>
       )}
-    </div>
+    </UserProfileWrapper>
   );
 };
 
