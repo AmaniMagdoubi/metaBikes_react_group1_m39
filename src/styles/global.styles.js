@@ -11,7 +11,7 @@ export const LeftSpace = styled.div`
 
     height: auto;
     min-width: 10em !important;
-    background: red; /* tester to be removed */
+    background: var(--clr-accent);
 
 `
 export const RightMainWrapper = styled.div`
