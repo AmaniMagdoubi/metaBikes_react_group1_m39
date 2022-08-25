@@ -35,7 +35,7 @@ const Basket =({ basketItems, addCat, subCat }) => {
             <ModalOff>
                 <button onClick = {modalOff}>X</button>
             </ModalOff>
-            <h2>Your Cat Basket</h2>
+            <h2>Your E-Bike Basket</h2>
             <Items basketItems = {basketItems}
             subCat = {subCat}
             addCat = {addCat}/>

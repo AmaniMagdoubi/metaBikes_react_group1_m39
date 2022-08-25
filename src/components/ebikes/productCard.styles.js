@@ -17,7 +17,7 @@ export const CardWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   border-radius: 18px;
-  background-color: #B90E0A;
+  background-color: var(--clr-btn);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: left;
   padding: 2px;
@@ -26,7 +26,7 @@ export const CardWrapper = styled.div`
 
   strong{
     margin: 9px 0px;
-    font: small-caps bold 18px Georgia, serif;
+    font-family: var(--ff-main);
   }
   
   @keyframes fadeIn {
@@ -83,7 +83,7 @@ export const Button = styled.button`
 
   color: white;
   border: none;
-  background: orange;
+  background: black;
   padding: 7px;
   border-radius: 5px;
   margin-left: 25px;
@@ -92,11 +92,12 @@ export const Button = styled.button`
   width: 10em;
 
   :hover{
-    background: black;
+    background: white;
+    color: #000;
   }
   :active{
     background: #fff;
-    color:#000;
+    color: black;
 }
   
 `

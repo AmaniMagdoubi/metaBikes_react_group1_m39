@@ -3,15 +3,17 @@ import styled from "styled-components";
 export const Position = styled.div`
 
     button{
-        background-color: black;
-        color: white;
-        border-radius: 5px;
-        border-color: rgb(0, 0, 0);
-        border-style: double;
+        background-color: var(--clr-btn);
+        border: solid 5px white;
         height: 50px;
         width: 120px;
         font-size: 20px;
         margin: 9px;
+    }
+
+    button:hover {
+        background-color: white;
+        border: solid 5px var(--clr-btn);
     }
 
 `
@@ -33,9 +35,10 @@ export const BasketWrapper = styled.div`
 
     height: auto;
     width: 25em;
-    border: solid 3px #46863D;
+    color: #fff;
+    border: solid 3px white;
     border-radius: 10px;
-    background: #F5F5DB;
+    background: var(--clr-btn);
     padding: 30px;
     position: relative;
     z-index: 1;
@@ -44,8 +47,8 @@ export const BasketWrapper = styled.div`
 
 
     h2{
-        font: small-caps bold 30px Georgia, serif;
-        color: #46863D;
+        font-family: var(--ff-main);
+        color: white;
         margin: 0 0 15px 0;
         text-align: center;
     }
@@ -54,11 +57,11 @@ export const BasketWrapper = styled.div`
         cursor: pointer;
         border: none;
         border-radius: 5px;
-        background: #46863D;
+        background: #fff;
     }
 
     button:hover{
-        background: #3A7033;
+        background: grey;
     }
     button:active{
         background: #000;
@@ -139,7 +142,7 @@ export const QuantityWrapper = styled.div`
 export const BottomWrapper = styled.div`
 
 text-align: center;
-font: small-caps bold 15px Georgia, serif;
+font-family: var(--ff-main);
 
 button{
 
