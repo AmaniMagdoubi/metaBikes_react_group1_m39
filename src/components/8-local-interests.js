@@ -1,6 +1,6 @@
 import React from "react";
-import Carousel from "react-elastic-carousel";
-import CarouselItems from "./18-carousel";
+// import Carousel from "react-elastic-carousel";
+// import CarouselItems from "./18-carousel";
 import {
   GlobalWrapper,
   LeftSpace,
@@ -39,11 +39,11 @@ const LocalInterests = () => {
               <h3 className="sub_heading">Enjoy your travels!</h3>
             </div>
             <br></br>
-            <div className="carousel_wrapper">
+            {/* <div className="carousel_wrapper">
               <CarouselItems Component breakPoints={breakPoints}>
                 <Carousel></Carousel>
               </CarouselItems>
-            </div>
+            </div> */}
           </div>
         </InterestWrapper>
       </RightMainWrapper>

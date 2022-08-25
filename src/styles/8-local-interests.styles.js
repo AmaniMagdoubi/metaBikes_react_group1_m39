@@ -23,14 +23,14 @@ export const InterestWrapper = styled.div`
 
     .carousel_wrapper{
 
-        width: 90%;
+        /* width: 90%;
         height: auto;
-        margin: auto;
+        margin: auto; */
         
 
         //Change carousel arrows
 
-        .rec.rec-arrow {
+        /* .rec.rec-arrow {
             border-radius: 0;
             background: var(--clr-accent);
         }
@@ -41,11 +41,11 @@ export const InterestWrapper = styled.div`
         
         .rec.rec-arrow:disabled {
             visibility: hidden;
-        }
+        } */
 
         //Change carousel dots
 
-        .rec-dot_active {
+        /* .rec-dot_active {
             background-color: var(--clr-outline) !important;
             box-shadow: 0 0 1px 3px var(--clr-text-dark) !important;
         }
@@ -62,7 +62,7 @@ export const InterestWrapper = styled.div`
         button.rec-dot{
             background: var(--clr-text-light);
             box-shadow: 0 0 1px 3px var(--clr-accent);
-        }
+        } */
 
     }
 
@@ -81,13 +81,13 @@ export const InterestWrapper = styled.div`
 
 export const CarouselImg = styled.div`
 
-    border: solid var(--clr-accent) 2px;
-
+    /* border: solid var(--clr-accent) 2px; */
+/* 
     img{
         
         height: 300px;
         width: 600px;
-    }
+    } */
 
     
 
