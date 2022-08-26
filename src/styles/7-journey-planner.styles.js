@@ -9,7 +9,6 @@ export const JourneyWrapper = styled.div`
     display:flex;
     padding: 5em 0;
     align-items: center;
-    background: var(--clr-text-light);
     animation: fadeIn 2s;
 
     .Journey_wrapper{

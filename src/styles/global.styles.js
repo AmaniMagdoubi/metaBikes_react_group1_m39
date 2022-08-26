@@ -40,7 +40,7 @@ export const GNavWrapper = styled.div`
     margin: auto;
     height: auto;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   
 `
 
@@ -55,6 +55,7 @@ export const LoginWrapper = styled.div`
     position: absolute;
     cursor: pointer;
     p:hover{color: var(--clr-btn);}
+    z-index: 1;
     
 `
 
@@ -70,5 +71,6 @@ export const LogoutWrapper = styled.div`
         right: 1em;
         button{padding: 5px 10px; border-radius: 25px 0px 25px;}
         button:hover{background: var(--clr-outline); color: var(--clr-text-light); border-radius: 0px 25px 0px;}
+        z-index: 1;
     
 `
