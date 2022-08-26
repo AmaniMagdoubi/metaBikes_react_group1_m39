@@ -24,7 +24,7 @@ const Basket = ({ basketItems, addCat, subCat }) => {
   return (
     <div>
       <Position>
-        <button onClick={modalOn}>🧺</button>
+        <button onClick={modalOn}>🏍️</button>
       </Position>
 
       {modalShow ? (

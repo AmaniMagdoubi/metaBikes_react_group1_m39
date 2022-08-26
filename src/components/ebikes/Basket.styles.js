@@ -5,9 +5,11 @@ export const Position = styled.div`
     button{
         background-color: var(--clr-btn);
         border: solid 2px white;
-        height: 50px;
-        width: 120px;
+        /* height: 1em;
+        width: 3em; */
         margin: 9px;
+        font-size: var(--fs-h1);
+        margin-bottom: 5px;
     }
 
 `
