@@ -4,9 +4,10 @@ import "../index.css";
 export const InterestWrapper = styled.div`
 
     height: 100vh;
-    margin-top: 0px;
+    margin-top: 3em;
     display:flex;
     align-items: center;
+    animation: fadeIn 2s;
 
     .interest_wrapper{
 
@@ -17,6 +18,22 @@ export const InterestWrapper = styled.div`
         text-align: center;
         display: flex;
         flex-direction: column;
+
+        .meta-bike-collage{
+            margin: auto;
+            padding: 20px;
+            display: flex; 
+            flex-direction: row;
+
+            img{max-width: 100%;}
+
+            #hide{  @media (max-width: 1130px) {
+                    display: none;}
+            
+            }
+
+            
+        }
         
     }
 

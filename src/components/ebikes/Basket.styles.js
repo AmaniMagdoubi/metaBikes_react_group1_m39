@@ -4,16 +4,10 @@ export const Position = styled.div`
 
     button{
         background-color: var(--clr-btn);
-        border: solid 5px white;
+        border: solid 2px white;
         height: 50px;
         width: 120px;
-        font-size: 20px;
         margin: 9px;
-    }
-
-    button:hover {
-        background-color: white;
-        border: solid 5px var(--clr-btn);
     }
 
 `
@@ -28,21 +22,20 @@ export const ModalBackground = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  padding-left: 10em;
 `;
 
 export const BasketWrapper = styled.div`
   height: auto;
   width: 25em;
-  border: solid 3px #46863d;
   border-radius: 10px;
-  background: #f5f5db;
   padding: 30px;
   position: relative;
   z-index: 1;
 
   h2 {
     font-family: var( --ff-title);
-    color: #46863d;
     margin: 0 0 15px 0;
     text-align: center;
   }
@@ -51,16 +44,14 @@ export const BasketWrapper = styled.div`
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background: #46863d;
   }
 
 
     height: auto;
     width: 25em;
-    color: #fff;
     border: solid 3px white;
     border-radius: 10px;
-    background: var(--clr-btn);
+    background: var(--clr-hl);
     padding: 30px;
     position: relative;
     z-index: 1;
@@ -70,16 +61,15 @@ export const BasketWrapper = styled.div`
 
     h2{
         font-family: var(--ff-main);
-        color: white;
         margin: 0 0 15px 0;
-        text-align: center;
+        text-align: left;
     }
 
     button{
         cursor: pointer;
         border: none;
         border-radius: 5px;
-        background: #fff;
+        margin-top: 10px;
     }
 
     button:hover{
@@ -98,8 +88,8 @@ export const ModalOff = styled.div`
   height: auto;
   width: auto;
   position: absolute;
-  left: 24em;
-  top: 1em;
+  left: 20em;
+  top: 13px;
 
   button {
     height: 30px;
@@ -125,11 +115,11 @@ export const YourSelection = styled.div`
 export const SectionWrapper = styled.div`
   height: auto;
   width: 350px;
-  background: #8dcb85;
-  border: solid 1px #6cbb63;
+  background: var(--clr-accent);
+  border: solid 1px var(--clr-outline);
   border-radius: 5px;
   margin: 10px;
-  box-shadow: 10px 10px 10px rgba(113, 113, 113, 0.4);
+  box-shadow: 10px 10px 10px rgba(134, 134, 134, 0.4);
   position: relative;
 `;
 
@@ -161,7 +151,7 @@ export const QuantityWrapper = styled.div`
 `;
 
 export const BottomWrapper = styled.div`
-  text-align: center;
+  /* text-align: center;
   font: small-caps bold 15px Georgia, serif;
 
 
@@ -174,5 +164,5 @@ font-family: var(--ff-main);
     height: 30px;
     width: 75%;
     display: inline-block;
-  }
+  } */
 `;

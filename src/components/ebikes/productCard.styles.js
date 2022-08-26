@@ -2,27 +2,31 @@ import styled from "styled-components";
 
 export const BodyWrapper = styled.div`
 
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  height: auto;
+  width: 95%;
+  display:flex;
   align-items: center;
-  animation: fadeIn 2s;
-  padding-bottom: 5em;
+  justify-content: center;
+  padding: 5em 0px;
+  border-radius: 25px;
+  background: var(--clr-hl);
+  flex-wrap: wrap;
+  margin: auto;
+
+
 `
 
 export const CardWrapper = styled.div`
-  height: 15em;
+
   width: 38%;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  border-radius: 18px;
+  border: solid 2px var(--clr-outline);
   background-color: var(--clr-btn);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: left;
-  padding: 2px;
-  margin: 10px;
-  margin-left: 180px;
+  padding: 10px;
+  margin: 20px;
   min-width: 600px;
 
 
@@ -31,52 +35,46 @@ export const CardWrapper = styled.div`
     font-family: var(--ff-main);
   }
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      margin-top: 4rem;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
-  @media (max-width: 700px) {
+  @media (max-width: 913px) {
     display: flex;
     flex-direction: column;
     height: auto;
-    max-width: 30em;
-    text-align: center;
+    min-width: 90%;
+    button{margin-bottom: 10px;}
    
-    button{
-      margin: 7px 0px 20px;
-    }
+   
   }
 `
 export const ImgWrapper = styled.div`
 
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   
 
 img{
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 18px;
-  padding: 10px;
+  max-width: 80%;
+  max-height: 100%;
 }
 
-@media (max-width: 700px) {
-  display: flex;
-  justify-content: center;
-}
+button{
+      margin-top: 10px;
+    }
 `;
 
 export const CardTextWrapper = styled.div`
 display: flex;
-flex-direction: column;  
-margin: 25px 25px 7px 25px;
-`;
+flex-direction: column; 
+align-items: center;
+padding: 10px;
+background-color: var(--clr-accent);
+
+    .card{width: auto; height: 100%; display: flex; align-items: center;}
+
+
+`
 
 export const Button = styled.button`
   color: white;

@@ -11,14 +11,11 @@ import { SocialWrapper } from "../styles/Social.styles";
 const Social = ({ user }) => {
   console.log(user);
   return (<GlobalWrapper>
-            <RightMainWrapper>
-            <LeftNav />
+          <LeftSpace></LeftSpace>
+          <LeftNav />
+          <RightMainWrapper>
               <SocialWrapper>
-            
-
-
-
-              <div className="test">
+              <div className="feed_position">
 
               <ImageFeed user={user}></ImageFeed>
             </div>
