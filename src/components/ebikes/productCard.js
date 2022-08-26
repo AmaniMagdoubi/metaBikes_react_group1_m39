@@ -14,7 +14,9 @@ export const ProductCard = (props) => {
           src="https://monochrome-watches.com/wp-content/uploads/2022/04/William-Wood-Watches-Saltire-Motorcycles-Always-Ready-Motorbike-Custom-Indian-Scout-4.jpg"
           alt="ebike"
         />
+        <Button onClick={() => props.addCat(props)}>Add To Cart</Button>
       </ImgWrapper>
+      
       <div className="card">
         <CardTextWrapper>
           <strong>
@@ -29,7 +31,7 @@ export const ProductCard = (props) => {
           <b />
           Cost: £{props.price}
         </CardTextWrapper>
-        <Button onClick={() => props.addCat(props)}>Add To Cart</Button>
+        
       </div>
     </CardWrapper>
   );

@@ -121,7 +121,7 @@ function JourneyPlanner() {
                     </Button>
                   </div>
 
-                  <div className="button">
+                  <div className="button icon">
                     <IconButton
                       aria-label="center back"
                       icon={<FaTimes />}

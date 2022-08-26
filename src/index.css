@@ -90,3 +90,13 @@ button{
   padding: 8px;
   cursor: pointer;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    margin-top: 4rem;
+  }
+  to {
+    opacity: 1;
+  }
+}

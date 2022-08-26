@@ -10,6 +10,7 @@ export const JourneyWrapper = styled.div`
     padding: 5em 0;
     align-items: center;
     background: var(--clr-text-light);
+    animation: fadeIn 2s;
 
     .Journey_wrapper{
 
@@ -22,6 +23,7 @@ export const JourneyWrapper = styled.div`
 
         .text_wrapper{
           padding: 10px;
+          margin-top: 3em;
 
           .sub_heading {
             font-family: var(--ff-three);
@@ -59,9 +61,18 @@ export const JourneyWrapper = styled.div`
 
         display: flex;
         flex-direction: row;
-        .button{margin: 10px;}
+
+        .button{ height: auto;}
 
       }
+
+      .icon, .button{
+        height: auto;
+        display: flex;
+        justify-content: center;
+        /* background: var(--clr-btn); */
+        margin: 10px;
+        border-radius: 20px;}
 
     }
 

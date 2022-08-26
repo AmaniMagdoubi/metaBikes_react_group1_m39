@@ -22,9 +22,10 @@ const UpdateUser = ({ setter, setDel, user }) => {
     );
   };
   return (<Wrapper>
-    
+
     <form onSubmit={submitHandler}>
-      <label>Curent Login Details:</label>
+      <div><label>Enter Current Login Details to Update:</label></div>
+      <div>
       <br></br>
       <input
         onChange={(event) => setUsername(event.target.value)}
@@ -38,11 +39,11 @@ const UpdateUser = ({ setter, setDel, user }) => {
         type="password"
         minLength="5"
         placeholder="Current Password"
-      ></input>
-      <DeleteUser setter={setDel} user={user}></DeleteUser>
+      ></input></div>
 
-      <label>Please enter new account details:</label>
+      <div><label>Please Enter Your New Account Details Here:</label></div>
       <br></br>
+      <div>
       <input
         onChange={(event) => setNewUsername(event.target.value)}
         type="text"
@@ -50,7 +51,6 @@ const UpdateUser = ({ setter, setDel, user }) => {
         placeholder="New Username"
       ></input>
       
-
       <input
         onChange={(event) => setNewEmail(event.target.value)}
         type="email"
@@ -63,9 +63,14 @@ const UpdateUser = ({ setter, setDel, user }) => {
         minLength="5"
         placeholder="New Password"
       ></input>
+      </div>
       <br></br>
-      <button type="submit">Submit</button>
-    </form></Wrapper>
+      <button type="submit">Update User</button>
+    </form>
+
+    <DeleteUser setter={setDel} user={user}></DeleteUser>
+    
+    </Wrapper>
   );
 };
 

@@ -51,7 +51,7 @@ const About = () => {
                   <div class="product" id="two">
                     <div class="addTag">
                       <img
-                        src="https://picsum.photos/id/191/500/500"
+                        src="https://picsum.photos/id/177/500/500"
                         alt="random img"
                       />
                       <span></span>
@@ -71,7 +71,7 @@ const About = () => {
                   <div class="product" id="two">
                     <div class="addTag">
                       <img
-                        src="https://random.imagecdn.app/500/500"
+                        src="https://picsum.photos/id/492/500/500"
                         alt="random img"
                       />
                       <span></span>
@@ -91,7 +91,7 @@ const About = () => {
                   <div class="product" id="three">
                     <div class="addTag">
                       <img
-                        src="https://random.imagecdn.app/400/400"
+                        src="https://picsum.photos/id/454/500/500"
                         alt="random img"
                       />
                       <span>NEW</span>
@@ -112,7 +112,7 @@ const About = () => {
                   <div class="product" id="four">
                     <div class="addTag">
                       <img
-                        src="https://random.imagecdn.app/300/300"
+                        src="https://picsum.photos/id/7/500/500"
                         alt="random img"
                       />
                       <span>COMING SOON</span>

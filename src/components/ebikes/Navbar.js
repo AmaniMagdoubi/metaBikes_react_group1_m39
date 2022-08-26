@@ -1,18 +1,13 @@
 import React from "react";
 import Basket from './Basket'
-import {StyleNavbar, NavWrapper} from './Navbar.styles';
 
 const Navbar = ({ basketItems, addCat, subCat }) => {
-    return (
-    
-    <StyleNavbar>
-      <NavWrapper>
+    return (<div>
         <Basket 
           basketItems={basketItems}
           addCat={addCat}
           subCat={subCat}/>
-      </NavWrapper>
-    </StyleNavbar > 
+          </div>
   );
 };
 

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const SignupWrapper = styled.div`
 
+
     .modal_off{
         position: relative;
         padding: 3px 10px;

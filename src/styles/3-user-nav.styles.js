@@ -70,7 +70,7 @@ export const UserWrapper = styled.div`
 
     .position_themes{
         position: absolute;
-        left: -5em;
+        left: -8em;
         top: 0em;
     }
 

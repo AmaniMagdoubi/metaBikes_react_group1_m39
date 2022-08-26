@@ -3,6 +3,7 @@ import "../index.css";
 
 export const HomeWrapper = styled.div`
 
+  animation: fadeIn 2s;
   height: 100%;
   margin-top: 2.1em;
   display:flex;

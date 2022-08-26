@@ -1,6 +1,4 @@
 import React from "react";
-// import Carousel from "react-elastic-carousel";
-// import CarouselItems from "./18-carousel";
 import {
   GlobalWrapper,
   LeftSpace,
@@ -8,12 +6,12 @@ import {
 } from "../styles/global.styles.js"; //Global wrapper styles
 import { InterestWrapper } from "../styles/8-local-interests.styles";
 
-const breakPoints = [
-  { width: 100, itemToShow: 1 },
-  { width: 550, itemToShow: 2 },
-  { width: 768, itemToShow: 3 },
-  { width: 1200, itemToShow: 4 },
-];
+// const breakPoints = [
+//   { width: 100, itemToShow: 1 },
+//   { width: 550, itemToShow: 2 },
+//   { width: 768, itemToShow: 3 },
+//   { width: 1200, itemToShow: 4 },
+// ];
 
 const LocalInterests = () => {
   return (
@@ -38,7 +36,20 @@ const LocalInterests = () => {
               </p>
               <h3 className="sub_heading">Enjoy your travels!</h3>
             </div>
-            <br></br>
+
+            <div className="meta-bike-collage">
+
+                <div><img
+                  src="https://i.postimg.cc/RVX25xfP/meta-bike-collage.png"
+                  alt="meta-bike-collage" 
+                /></div>
+
+              <div><img id="hide"
+                  src="https://i.postimg.cc/RVX25xfP/meta-bike-collage.png"
+                  alt="meta-bike-collage" 
+                /></div>
+
+            </div>
             {/* <div className="carousel_wrapper">
               <CarouselItems Component breakPoints={breakPoints}>
                 <Carousel></Carousel>

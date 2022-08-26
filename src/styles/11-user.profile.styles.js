@@ -4,6 +4,7 @@ export const UserProfileWrapper = styled.div`
 
     height: 100vh;
     width: 100%;
+    padding-top: 10em;
     margin-top: 0px;
     display:flex;
     align-items: center;
@@ -14,7 +15,7 @@ export const UserProfileWrapper = styled.div`
 .profile_wrapper{
 
         width: 95%;
-        height: auto;
+        height: 100%;
         margin: auto;
         padding: 15px;
         text-align: center;
@@ -52,6 +53,8 @@ border: dotted var(--clr-text-light) 4px;
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
+margin-bottom: 5em;
+animation: fadeIn 2s;
 
 .list_wrapper{
 
@@ -65,10 +68,13 @@ flex-wrap: wrap;
 `
 export const Wrapper = styled.div`
 
-    
+    padding: 10px;
+
     button{
-        margin: 20px;
+        margin: 5px;
     }
+
+    input{margin: 0px 20px 20px;}
 
 
 `
