@@ -94,11 +94,12 @@ export const ModalOff = styled.div`
   button {
     height: 30px;
     width: 60px;
+    color: black; 
   }
 
   button:active {
     background: #000;
-    color: #fff;
+    color: black;
   }
 `;
 
@@ -137,6 +138,7 @@ export const QuantityWrapper = styled.div`
     margin: 10px;
     height: 30px;
     width: 40px;
+    color: black;
   }
 
   button:active {
@@ -147,12 +149,13 @@ export const QuantityWrapper = styled.div`
   p {
     margin: 0 10px 10px 10px;
     padding-right: 6px;
+    color: black; 
   }
 `;
 
 export const BottomWrapper = styled.div`
-  /* text-align: center;
-  font: small-caps bold 15px Georgia, serif;
+  text-align: center;
+  font-family: var(--ff-title);
 
 
 text-align: center;
@@ -164,5 +167,7 @@ font-family: var(--ff-main);
     height: 30px;
     width: 75%;
     display: inline-block;
-  } */
+    color: black;
+  }
+
 `;

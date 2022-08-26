@@ -11,7 +11,7 @@ const Items = ({ basketItems, addCat, subCat }) => {
     <YourSelection>
       {basketItems.map((product) => (
         <SectionWrapper>
-          <CatName key={product.id}>{product.name}</CatName>
+          <CatName key={product.id}>{product.vehicle}</CatName>
           <QuantityWrapper>
             <button onClick={() => subCat(product)}>-</button>
             <button onClick={() => addCat(product)}>+</button>
