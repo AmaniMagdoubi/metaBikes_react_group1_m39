@@ -99,7 +99,7 @@ const Footer = () => {
                 <div className="copyright_footer">
                   <div>
                     <p>
-                      (c) COPYRIGHT - META BIKES Team (Aidan, Amani, Cryshae,
+                      (c) COPYRIGHT - META BIKES Team (Aidan, Amani, Shae,
                       Paul and Seb){" "}
                     </p>
                   </div>
