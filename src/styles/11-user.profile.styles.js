@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const UserProfileWrapper = styled.div`
 
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding-top: 10em;
     margin-top: 0px;
